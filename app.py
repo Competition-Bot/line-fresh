@@ -43,14 +43,14 @@ def handle_message(event):
             event.reply_token,
             TextSendMessage(text="hello"))
         target = True
-    elif(event.message.text == 'hello'):
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text="hello"))
     elif(event.message.text == 'hello' and target == True):
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text="hi"))
+    elif(event.message.text == 'hello'):
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text="hello"))
 
 
 

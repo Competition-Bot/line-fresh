@@ -33,8 +33,7 @@ def callback():
 
     return 'OK'
 
-
-target = False
+target = 0
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
@@ -42,8 +41,9 @@ def handle_message(event):
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text="hello"))
-        target = True
-    elif(event.message.text == 'hello' and target == True):
+        global target
+        target += 1
+    elif(event.message.text == 'hello' and target > 0):
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text="hi"))

@@ -8,7 +8,7 @@ from linebot.exceptions import (
     InvalidSignatureError
 )
 from linebot.models import (
-    MessageEvent, TextMessage, TextSendMessage,TemplateSendMessage,ButtonsTemplate
+    MessageEvent, TextMessage, TextSendMessage,TemplateSendMessage,ButtonsTemplate,PostbackAction,MessageAction,URIAction
 )
 
 app = Flask(__name__)
@@ -81,11 +81,6 @@ def handle_message(event):
                 imageBackgroundColor='#FFFFFF',
                 title='iThome鐵人2021',
                 text='Buttons template',
-                defaultAction=[
-                    type='uri',
-                    label='View detail',
-                    uri='http://example.com/page/123'
-                ],
                 actions=[
                     PostbackAction(
                         label='postback',

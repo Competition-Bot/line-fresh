@@ -12,8 +12,10 @@ from linebot.models import (
 
 app = Flask(__name__)
 
-line_bot_api = LineBotApi('qDvsOUDQMWXwONG+aH+fwhbeD5qU7Cs9okmn5FngnuXAZlykbPx77W6O5cuvPAjVloywUpG3ZD1hSMTT28SvctIcybUYHJlAmJY2e4KzbeHeUDVVmfAbeZwqZiDPAafYoyUSdpd59O0ARk937Vv7VwdB04t89/1O/w1cDnyilFU=')
+line_bot_api = LineBotApi(
+    'qDvsOUDQMWXwONG+aH+fwhbeD5qU7Cs9okmn5FngnuXAZlykbPx77W6O5cuvPAjVloywUpG3ZD1hSMTT28SvctIcybUYHJlAmJY2e4KzbeHeUDVVmfAbeZwqZiDPAafYoyUSdpd59O0ARk937Vv7VwdB04t89/1O/w1cDnyilFU=')
 handler = WebhookHandler('dcc7f9bee687f90fe33cc309962f1210')
+
 
 @app.route("/callback", methods=['POST'])
 def callback():
@@ -33,24 +35,37 @@ def callback():
 
     return 'OK'
 
-target = 0
+
+level = 1
+
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    if(event.message.text == '你好'):
+    global level
+    if(event.message.text == '第一關'):
         line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text="hello"))
-        global target
-        target += 1
-    elif(event.message.text == 'hello' and target > 0):
+            TextSendMessage(text="第一關pass"))
+        level += 1
+    elif(event.message.text == '第二關' and level == 2):
         line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text="hi"))
-    elif(event.message.text == 'hello'):
+            TextSendMessage(text="第二關pass"))
+        level += 1
+    elif(event.message.text == '第三關' and level == 3):
         line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text="hello"))
+            TextSendMessage(text="第三關pass"))
+        level += 1
+    elif(event.message.text == '第四關' and level == 4):
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text="第四關pass"))
+        level += 1
+    else:
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text="你輸入錯了!，第"+str(level)+"關還沒通過"))
 
 
 

@@ -68,7 +68,7 @@ def handle_message(event):
             event.reply_token,
             TextSendMessage(text="你輸入錯了!，第"+str(level)+"關還沒通過"))
 
-
+@handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     line_bot_api.reply_message(
         event.reply_token,

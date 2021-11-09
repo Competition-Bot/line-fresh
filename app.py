@@ -1,3 +1,4 @@
+import os
 from flask import Flask, request, abort
 
 from linebot import (
@@ -7,7 +8,7 @@ from linebot.exceptions import (
     InvalidSignatureError
 )
 from linebot.models import (
-    MessageEvent, TextMessage, TextSendMessage,
+    MessageEvent, TextMessage, TextSendMessage,TemplateSendMessage,ButtonsTemplate
 )
 
 app = Flask(__name__)
@@ -68,8 +69,42 @@ def handle_message(event):
             TextSendMessage(text="你輸入錯了!，第"+str(level)+"關還沒通過"))
 
 
+def handle_message(event):
+    line_bot_api.reply_message(
+        event.reply_token,
+        TemplateSendMessage(
+            alt_text='This is a buttons template',
+            template=ButtonsTemplate(
+                thumbnail_image_url='https://ithelp.ithome.com.tw/storage/image/fight.svg',
+                imageAspectRatio='rectangle',
+                imageSize='cover',
+                imageBackgroundColor='#FFFFFF',
+                title='iThome鐵人2021',
+                text='Buttons template',
+                defaultAction=[
+                    type='uri',
+                    label='View detail',
+                    uri='http://example.com/page/123'
+                ],
+                actions=[
+                    PostbackAction(
+                        label='postback',
+                        display_text='postback text',
+                        data='action=buy&itemid=1'
+                    ),
+                    MessageAction(
+                        label='message',
+                        text='message text'
+                    ),
+                    URIAction(
+                        label='uri',
+                        uri='http://example.com/'
+                    )
+                ]
+            )
+        ))
 
-import os
+
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)

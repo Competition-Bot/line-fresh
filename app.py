@@ -1,21 +1,14 @@
 import os
 from flask import Flask, request, abort
-
-from linebot import (
-    LineBotApi, WebhookHandler
-)
 from linebot.exceptions import (
     InvalidSignatureError
 )
 from linebot.models import (
-    MessageEvent, TextMessage, TextSendMessage,TemplateSendMessage,ButtonsTemplate,PostbackAction,MessageAction,URIAction
+    MessageEvent, TextMessage, TextSendMessage, TemplateSendMessage, ButtonsTemplate, PostbackAction, MessageAction, URIAction
 )
+from linebot import handler, line_bot_api
 
 app = Flask(__name__)
-
-line_bot_api = LineBotApi(
-    'qDvsOUDQMWXwONG+aH+fwhbeD5qU7Cs9okmn5FngnuXAZlykbPx77W6O5cuvPAjVloywUpG3ZD1hSMTT28SvctIcybUYHJlAmJY2e4KzbeHeUDVVmfAbeZwqZiDPAafYoyUSdpd59O0ARk937Vv7VwdB04t89/1O/w1cDnyilFU=')
-handler = WebhookHandler('dcc7f9bee687f90fe33cc309962f1210')
 
 
 @app.route("/callback", methods=['POST'])
@@ -67,6 +60,7 @@ def handle_message(event):
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text="你輸入錯了!，第"+str(level)+"關還沒通過"))
+
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):

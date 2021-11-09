@@ -6,9 +6,15 @@ from linebot.exceptions import (
 from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage, TemplateSendMessage, ButtonsTemplate, PostbackAction, MessageAction, URIAction
 )
-from linebot_api import api
+from linebot import (
+    LineBotApi, WebhookHandler
+)
 
 app = Flask(__name__)
+
+line_bot_api = LineBotApi(
+    'qDvsOUDQMWXwONG+aH+fwhbeD5qU7Cs9okmn5FngnuXAZlykbPx77W6O5cuvPAjVloywUpG3ZD1hSMTT28SvctIcybUYHJlAmJY2e4KzbeHeUDVVmfAbeZwqZiDPAafYoyUSdpd59O0ARk937Vv7VwdB04t89/1O/w1cDnyilFU=')
+handler = WebhookHandler('dcc7f9bee687f90fe33cc309962f1210')
 
 
 @app.route("/callback", methods=['POST'])
@@ -22,7 +28,7 @@ def callback():
 
     # handle webhook body
     try:
-        api.handler.handle(body, signature)
+        line_bot_api.handler.handle(body, signature)
     except InvalidSignatureError:
         print("Invalid signature. Please check your channel access token/channel secret.")
         abort(400)
@@ -33,38 +39,38 @@ def callback():
 level = 1
 
 
-@api.handler.add(MessageEvent, message=TextMessage)
+@handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     global level
     if(event.message.text == '第一關'):
-        api.reply_message(
+        line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text="第一關pass"))
         level += 1
     elif(event.message.text == '第二關' and level == 2):
-        api.reply_message(
+        line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text="第二關pass"))
         level += 1
     elif(event.message.text == '第三關' and level == 3):
-        api.reply_message(
+        line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text="第三關pass"))
         level += 1
     elif(event.message.text == '第四關' and level == 4):
-        api.reply_message(
+        line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text="第四關pass"))
         level += 1
     else:
-        api.reply_message(
+        line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text="你輸入錯了!，第"+str(level)+"關還沒通過"))
 
 
-@api.handler.add(MessageEvent, message=TextMessage)
+@handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    api.reply_message(
+    line_bot_api.reply_message(
         event.reply_token,
         TemplateSendMessage(
             alt_text='This is a buttons template',

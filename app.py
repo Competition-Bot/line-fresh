@@ -48,8 +48,8 @@ def handle_message(event):
             event.reply_token,
             [TextSendMessage(text="以前阿嬤常常帶我去虎尾糖廠買冰棒吃～然後坐在月台看火車～小時候我曾經在作文上寫我要當火車司機呢！"),
              TextSendMessage(text="我最喜歡這班車！"),
-             ImageSendMessage(originalContentUrl="https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg",
-                          previewImageUrl="https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg"),
+             ImageSendMessage("https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg",
+                              "https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg"),
              TextSendMessage(text="請輸入『我搭00：00的000出發！』(00：00為時間、000為車種)"),
              TextSendMessage(text="我搭14：00的2077出發！』(00：00為時間、000為車種)")])
 

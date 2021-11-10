@@ -92,13 +92,8 @@ def handle_message(event):
                     imageSize='cover',
                     imageBackgroundColor='#FFFFFF',
                     title='虎尾鐵橋',
-                    text='虎尾糖廠鐵橋，又被稱作虎尾鐵橋',
+                    text='虎尾糖廠鐵橋，又被稱作虎尾鐵橋，舊名番薯莊板仔橋，於台灣日治時期興建並於國民政府時代延建，為雲林縣縣定古蹟。',
                     actions=[
-                        PostbackAction(
-                            label='postback',
-                            display_text='postback text',
-                            data='action=buy&itemid=1'
-                        ),
                         MessageAction(
                             label='message',
                             text='message text'

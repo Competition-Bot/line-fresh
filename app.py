@@ -81,18 +81,18 @@ def handle_message(event):
              ImageSendMessage("https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg",
                               "https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg"),
              TextSendMessage(text="請輸入『我搭00：00的000出發！』(00：00為時間、000為車種)")])
-    elif(event.message.text == '我搭14:00的2077出發！'):
+    elif(event.message.text == '我搭14:00的2077出發！' or event.message.text == '我搭14：00的2077出發！' or event.message.text == '我搭14：00的2077出發!' or event.message.text == '我搭14:00的2077出發!' ):
         line_bot_api.reply_message(
             event.reply_token,
             TemplateSendMessage(
-                alt_text='This is a buttons template',
+                alt_text='虎尾鐵橋',
                 template=ButtonsTemplate(
                     thumbnail_image_url='https://ithelp.ithome.com.tw/storage/image/fight.svg',
                     imageAspectRatio='rectangle',
                     imageSize='cover',
                     imageBackgroundColor='#FFFFFF',
-                    title='iThome鐵人2021',
-                    text='Buttons template',
+                    title='虎尾鐵橋',
+                    text='虎尾糖廠鐵橋，又被稱作虎尾鐵橋，舊名番薯莊板仔橋，是一座鋼桁架橋、鈑梁橋及工字梁橋混合型式的橋梁，於台灣日治時期興建並於國民政府時代延建，位於台灣雲林縣虎尾鎮，為雲林縣縣定古蹟。目前屬於台灣糖業公司，作為糖業鐵路。',
                     actions=[
                         PostbackAction(
                             label='postback',

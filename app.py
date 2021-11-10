@@ -8,7 +8,7 @@ from linebot.exceptions import (
     InvalidSignatureError
 )
 from linebot.models import (
-    MessageEvent, TextMessage, TextSendMessage, ImageSendMessage, TemplateSendMessage, MessageAction, URIAction, ButtonsTemplate, PostbackAction
+    MessageEvent, TextMessage, TextSendMessage, ImageSendMessage, MessageAction, URIAction, ButtonsTemplate, PostbackAction, TemplateSendMessage
 )
 
 app = Flask(__name__)
@@ -46,28 +46,26 @@ def handle_message(event):
     if(event.message.text == '開始'):
         line_bot_api.reply_message(
             event.reply_token,
-            template=ButtonsTemplate(
-                thumbnail_image_url='https://ithelp.ithome.com.tw/storage/image/fight.svg',
-                imageAspectRatio='rectangle',
-                imageSize='cover',
-                imageBackgroundColor='#FFFFFF',
-                title='虎尾驛',
-                text='虎尾驛虎尾驛虎尾驛虎尾驛虎尾驛虎尾驛虎尾驛虎尾驛',
-                actions=[
-                    PostbackAction(
-                        label='postback',
-                        display_text='postback text',
-                        data='action=buy&itemid=1'
-                    ),
-                    MessageAction(
-                        label='查看日記',
-                        text='查看日記'
-                    ),
-                    URIAction(
-                        label='查看熱點',
-                        uri='https://docs.google.com/presentation/d/1V7k0k-NAmPasDC804XgVMVXz18XYi12HA3P384551AQ/edit#slide=id.gf7bb0c4a82_0_35'
-                    )
-                ]
+            TemplateSendMessage(
+                alt_text='虎尾驛',
+                template=ButtonsTemplate(
+                    thumbnail_image_url='https://i2.wp.com/ivychi.com/wp-content/uploads/20201104123257_57.jpg',
+                    imageAspectRatio='rectangle',
+                    imageSize='cover',
+                    imageBackgroundColor='#FFFFFF',
+                    title='虎尾驛',
+                    text='虎尾驛為中華民國雲林縣虎尾鎮一已廢棄木造火車站，原是虎尾糖廠小火車車站，亦為糖鐵北港線、雲虎線、西螺線、崙背線及莿桐線等的重要車站。',
+                    actions=[
+                        MessageAction(
+                            label='查看日記',
+                            text='查看日記'
+                        ),
+                        URIAction(
+                            label='查看熱點資訊',
+                            uri='https://spot.line.me/detail/720382419873591332'
+                        )
+                    ]
+                )
             )
         )
     elif(event.message.text == '查看日記'):
@@ -82,31 +80,33 @@ def handle_message(event):
     elif(event.message.text == '我搭14:00的2077出發！'):
         line_bot_api.reply_message(
             event.reply_token,
-            template=ButtonsTemplate(
-                thumbnail_image_url='https://ithelp.ithome.com.tw/storage/image/fight.svg',
-                imageAspectRatio='rectangle',
-                imageSize='cover',
-                imageBackgroundColor='#FFFFFF',
-                title='iThome鐵人2021',
-                text='Buttons template',
-                actions=[
-                    PostbackAction(
-                        label='postback',
-                        display_text='postback text',
-                        data='action=buy&itemid=1'
-                    ),
-                    MessageAction(
-                        label='message',
-                        text='message text'
-                    ),
-                    URIAction(
-                        label='uri',
-                        uri='http://example.com/'
-                    )
-                ]
+            TemplateSendMessage(
+                alt_text='虎尾鐵橋',
+                template=ButtonsTemplate(
+                    thumbnail_image_url='https://ithelp.ithome.com.tw/storage/image/fight.svg',
+                    imageAspectRatio='rectangle',
+                    imageSize='cover',
+                    imageBackgroundColor='#FFFFFF',
+                    title='虎尾鐵橋',
+                    text='虎尾糖廠鐵橋，又被稱作虎尾鐵橋，舊名番薯莊板仔橋，是一座鋼桁架橋、鈑梁橋及工字梁橋混合型式的橋梁，於台灣日治時期興建並於國民政府時代延建，位於台灣雲林縣虎尾鎮，為雲林縣縣定古蹟。目前屬於台灣糖業公司，作為糖業鐵路。',
+                    actions=[
+                        PostbackAction(
+                            label='postback',
+                            display_text='postback text',
+                            data='action=buy&itemid=1'
+                        ),
+                        MessageAction(
+                            label='message',
+                            text='message text'
+                        ),
+                        URIAction(
+                            label='uri',
+                            uri='http://example.com/'
+                        )
+                    ]
+                )
             )
         )
-
 
 # @handler.add(MessageEvent, message=TextMessage)
 # def handle_message(event):
@@ -138,6 +138,7 @@ def handle_message(event):
 #                 ]
 #             )
 #         ))
+
 
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))

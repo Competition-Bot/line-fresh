@@ -49,18 +49,13 @@ def handle_message(event):
             TemplateSendMessage(
                 alt_text='虎尾驛',
                 template=ButtonsTemplate(
-                    thumbnail_image_url='https://i2.wp.com/ivychi.com/wp-content/uploads/20201104123257_57.jpg',
+                    thumbnail_image_url='https://ithelp.ithome.com.tw/storage/image/fight.svg',
                     imageAspectRatio='rectangle',
                     imageSize='cover',
                     imageBackgroundColor='#FFFFFF',
                     title='虎尾驛',
-                    text='虎尾驛為中華民國雲林縣虎尾鎮一已廢棄木造火車站，原是虎尾糖廠小火車車站，亦為糖鐵北港線、雲虎線、西螺線、崙背線及莿桐線等的重要車站。',
+                    text='虎尾驛為中華民國雲林縣虎尾鎮一已廢棄木造火車站，原是虎尾糖廠小火車車站。',
                     actions=[
-                        PostbackAction(
-                            label='postback',
-                            display_text='postback text',
-                            data='action=buy&itemid=1'
-                        ),
                         MessageAction(
                             label='查看日記',
                             text='查看日記'
@@ -92,15 +87,15 @@ def handle_message(event):
                     imageSize='cover',
                     imageBackgroundColor='#FFFFFF',
                     title='虎尾鐵橋',
-                    text='虎尾糖廠鐵橋，又被稱作虎尾鐵橋，舊名番薯莊板仔橋，於台灣日治時期興建並於國民政府時代延建，為雲林縣縣定古蹟。',
+                    text='虎尾糖廠鐵橋，舊名番薯莊板仔橋，於台灣日治時期興建並於國民政府時代延建，為雲林縣縣定古蹟。',
                     actions=[
                         MessageAction(
-                            label='message',
-                            text='message text'
+                            label='查看日記',
+                            text='查看日記'
                         ),
                         URIAction(
-                            label='uri',
-                            uri='http://example.com/'
+                            label='查看熱點資訊',
+                            uri='https://spot.line.me/detail/720382419873591332'
                         )
                     ]
                 )

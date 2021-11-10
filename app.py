@@ -43,7 +43,7 @@ level = 1
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     global level
-    if(event.message.text == '開始'):
+    if(event.message.text == '開始1'):
         line_bot_api.reply_message(
             event.reply_token,
             TemplateSendMessage(
@@ -76,7 +76,7 @@ def handle_message(event):
              ImageSendMessage("https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg",
                               "https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg"),
              TextSendMessage(text="請輸入『我搭00：00的000出發！』(00：00為時間、000為車種)")])
-    elif(event.message.text == '我搭14:00的2077出發！' or event.message.text == '我搭14：00的2077出發！' or event.message.text == '我搭14：00的2077出發!' or event.message.text == '我搭14:00的2077出發!' ):
+    elif(event.message.text == '我搭14:00的2077出發！' or event.message.text == '我搭14：00的2077出發！' or event.message.text == '我搭14：00的2077出發!' or event.message.text == '我搭14:00的2077出發!'):
         line_bot_api.reply_message(
             event.reply_token,
             TemplateSendMessage(
@@ -100,6 +100,33 @@ def handle_message(event):
                     ]
                 )
             ))
+
+    elif(event.message.text == '開始2'):
+        line_bot_api.reply_message(
+            event.reply_token,
+            [TextSendMessage(
+                text="這是電台節目表，你應該還記得我們最愛聽什麼節目吧!"),
+             ImageSendMessage("https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg",
+                              "https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg"),
+             TemplateSendMessage(
+                alt_text='一台復古收音機',
+                template=ButtonsTemplate(
+                    thumbnail_image_url='https://raw.githubusercontent.com/tsaiyuyes7/LIFF_test/main/img/radio.png',
+                    imageAspectRatio='rectangle',
+                    imageSize='cover',
+                    imageBackgroundColor='#FFFFFF',
+                    title='一台復古收音機',
+                    text=' ',
+                    actions=[
+                        URIAction(
+                            label='開啟收音機',
+                            uri='https://liff.line.me/1656608345-0Yx6zYOX'
+                        )
+                    ]
+                )
+            ),
+                TextSendMessage(text="請輸入『前往xxx』(xxx是地點名)")]
+        )
 
 # @handler.add(MessageEvent, message=TextMessage)
 # def handle_message(event):

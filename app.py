@@ -56,6 +56,11 @@ def handle_message(event):
                     title='虎尾驛',
                     text='虎尾驛為中華民國雲林縣虎尾鎮一已廢棄木造火車站，原是虎尾糖廠小火車車站，亦為糖鐵北港線、雲虎線、西螺線、崙背線及莿桐線等的重要車站。',
                     actions=[
+                        PostbackAction(
+                            label='postback',
+                            display_text='postback text',
+                            data='action=buy&itemid=1'
+                        ),
                         MessageAction(
                             label='查看日記',
                             text='查看日記'

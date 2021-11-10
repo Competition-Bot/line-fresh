@@ -82,7 +82,7 @@ def handle_message(event):
             TemplateSendMessage(
                 alt_text='虎尾鐵橋',
                 template=ButtonsTemplate(
-                    thumbnail_image_url='http://farm8.staticflickr.com/7904/40139379633_bf154ee55d_b.jpg',
+                    thumbnail_image_url='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Huwei_Dual_gauge_track_bridge_01.jpg/288px-Huwei_Dual_gauge_track_bridge_01.jpg',
                     imageAspectRatio='rectangle',
                     imageSize='cover',
                     imageBackgroundColor='#FFFFFF',

@@ -92,7 +92,7 @@ def handle_message(event):
                     imageSize='cover',
                     imageBackgroundColor='#FFFFFF',
                     title='虎尾鐵橋',
-                    text='虎尾糖廠鐵橋，又被稱作虎尾鐵橋，舊名番薯莊板仔橋，是一座鋼桁架橋、鈑梁橋及工字梁橋混合型式的橋梁，於台灣日治時期興建並於國民政府時代延建，位於台灣雲林縣虎尾鎮，為雲林縣縣定古蹟。目前屬於台灣糖業公司，作為糖業鐵路。',
+                    text='虎尾糖廠鐵橋，又被稱作虎尾鐵橋',
                     actions=[
                         PostbackAction(
                             label='postback',

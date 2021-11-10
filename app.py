@@ -49,7 +49,7 @@ def handle_message(event):
             TemplateSendMessage(
                 alt_text='虎尾驛',
                 template=ButtonsTemplate(
-                    thumbnail_image_url='https://ithelp.ithome.com.tw/storage/image/fight.svg',
+                    thumbnail_image_url='https://i2.wp.com/ivychi.com/wp-content/uploads/20201104123257_57.jpg',
                     imageAspectRatio='rectangle',
                     imageSize='cover',
                     imageBackgroundColor='#FFFFFF',
@@ -82,7 +82,7 @@ def handle_message(event):
             TemplateSendMessage(
                 alt_text='虎尾鐵橋',
                 template=ButtonsTemplate(
-                    thumbnail_image_url='https://ithelp.ithome.com.tw/storage/image/fight.svg',
+                    thumbnail_image_url='http://farm8.staticflickr.com/7904/40139379633_bf154ee55d_b.jpg',
                     imageAspectRatio='rectangle',
                     imageSize='cover',
                     imageBackgroundColor='#FFFFFF',

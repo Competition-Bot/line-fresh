@@ -64,36 +64,36 @@ def handle_message(event):
             TextSendMessage(text="我搭14：00的2077出發！』(00：00為時間、000為車種)"))
 
 
-@handler.add(MessageEvent, message=TextMessage)
-def handle_message(event):
-    line_bot_api.reply_message(
-        event.reply_token,
-        TemplateSendMessage(
-            alt_text='This is a buttons template',
-            template=ButtonsTemplate(
-                thumbnail_image_url='https://ithelp.ithome.com.tw/storage/image/fight.svg',
-                imageAspectRatio='rectangle',
-                imageSize='cover',
-                imageBackgroundColor='#FFFFFF',
-                title='iThome鐵人2021',
-                text='Buttons template',
-                actions=[
-                    PostbackAction(
-                        label='postback',
-                        display_text='postback text',
-                        data='action=buy&itemid=1'
-                    ),
-                    MessageAction(
-                        label='message',
-                        text='message text'
-                    ),
-                    URIAction(
-                        label='uri',
-                        uri='http://example.com/'
-                    )
-                ]
-            )
-        ))
+# @handler.add(MessageEvent, message=TextMessage)
+# def handle_message(event):
+#     line_bot_api.reply_message(
+#         event.reply_token,
+#         TemplateSendMessage(
+#             alt_text='This is a buttons template',
+#             template=ButtonsTemplate(
+#                 thumbnail_image_url='https://ithelp.ithome.com.tw/storage/image/fight.svg',
+#                 imageAspectRatio='rectangle',
+#                 imageSize='cover',
+#                 imageBackgroundColor='#FFFFFF',
+#                 title='iThome鐵人2021',
+#                 text='Buttons template',
+#                 actions=[
+#                     PostbackAction(
+#                         label='postback',
+#                         display_text='postback text',
+#                         data='action=buy&itemid=1'
+#                     ),
+#                     MessageAction(
+#                         label='message',
+#                         text='message text'
+#                     ),
+#                     URIAction(
+#                         label='uri',
+#                         uri='http://example.com/'
+#                     )
+#                 ]
+#             )
+#         ))
 
 
 if __name__ == "__main__":

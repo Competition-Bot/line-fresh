@@ -54,7 +54,7 @@ def handle_message(event):
                     imageSize='cover',
                     imageBackgroundColor='#FFFFFF',
                     title='虎尾驛',
-                    text='虎尾驛為中華民國雲林縣虎尾鎮一已廢棄木造火車站，原是虎尾糖廠小火車車站，亦為糖鐵北港線、雲虎線、西螺線、崙背線及莿桐線等的重要車站。',
+                    text='虎尾驛為中華民國雲林縣虎尾鎮一已廢棄木造火車站',
                     actions=[PostbackAction(
                         label='postback',
                         display_text='postback text',
@@ -81,7 +81,7 @@ def handle_message(event):
              ImageSendMessage("https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg",
                               "https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg"),
              TextSendMessage(text="請輸入『我搭00：00的000出發！』(00：00為時間、000為車種)")])
-    elif(event.message.text == '我搭14：00的2077出發！'):
+    elif(event.message.text == '我搭14:00的2077出發！'):
         line_bot_api.reply_message(
             event.reply_token,
             TemplateSendMessage(
@@ -92,7 +92,7 @@ def handle_message(event):
                     imageSize='cover',
                     imageBackgroundColor='#FFFFFF',
                     title='虎尾鐵橋',
-                    text='虎尾糖廠鐵橋，又被稱作虎尾鐵橋，舊名番薯莊板仔橋，是一座鋼桁架橋、鈑梁橋及工字梁橋混合型式的橋梁，於台灣日治時期興建並於國民政府時代延建，位於台灣雲林縣虎尾鎮，為雲林縣縣定古蹟。目前屬於台灣糖業公司，作為糖業鐵路。',
+                    text='虎尾糖廠鐵橋，又被稱作虎尾鐵橋，舊名番薯莊板仔橋',
                     actions=[
                         PostbackAction(
                             label='postback',

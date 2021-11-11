@@ -73,8 +73,8 @@ def handle_message(event):
             [TextSendMessage(
                 text="以前阿嬤常常帶我去虎尾糖廠買冰棒吃～然後坐在月台看火車～小時候我曾經在作文上寫我要當火車司機呢！"),
              TextSendMessage(text="我最喜歡這班車！"),
-             ImageSendMessage("https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg",
-                              "https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg"),
+             ImageSendMessage("https://github.com/tsaiyuyes7/LIFF_test/blob/main/img/9-09.jpg?raw=true",
+                              "https://github.com/tsaiyuyes7/LIFF_test/blob/main/img/9-09.jpg?raw=true"),
              TextSendMessage(text="請輸入『我搭00：00的000出發！』(00：00為時間、000為車種)")])
     elif(event.message.text == '我搭14:00的2077出發！' or event.message.text == '我搭14：00的2077出發！' or event.message.text == '我搭14：00的2077出發!' or event.message.text == '我搭14:00的2077出發!'):
         line_bot_api.reply_message(

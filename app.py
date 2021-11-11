@@ -115,8 +115,7 @@ def handle_message(event):
                     imageAspectRatio='rectangle',
                     imageSize='cover',
                     imageBackgroundColor='#FFFFFF',
-                    title='一台復古收音機',
-                    text=' ',
+                    text='一台復古收音機',
                     actions=[
                         URIAction(
                             label='開啟收音機',

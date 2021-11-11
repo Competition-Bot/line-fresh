@@ -106,8 +106,8 @@ def handle_message(event):
             event.reply_token,
             [TextSendMessage(
                 text="這是電台節目表，你應該還記得我們最愛聽什麼節目吧!"),
-             ImageSendMessage("https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg",
-                              "https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg"),
+             ImageSendMessage("https://github.com/tsaiyuyes7/LIFF_test/blob/main/img/channel-06.jpg?raw=true",
+                              "https://github.com/tsaiyuyes7/LIFF_test/blob/main/img/channel-06.jpg?raw=true"),
              TemplateSendMessage(
                 alt_text='一台復古收音機',
                 template=ButtonsTemplate(

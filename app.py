@@ -63,7 +63,7 @@ def handle_message(event):
     elif((event.message.text == '2B' and level == 1) or event.message.text == 'test2'):
         level = 2
         leveltwo_message(event)
-    elif((event.message.text == ('有6隻石頭鳥'or'有六隻石頭鳥') and level == 2) or event.message.text == 'test3'):
+    elif(((event.message.text == '有6隻石頭鳥' or event.message.text =='有六隻石頭鳥') and level == 2) or event.message.text == 'test3'):
         level = 3
         levelthree_message(event)
     elif((event.message.text == '前往合同廳舍' and level == 3) or event.message.text == 'test4'):

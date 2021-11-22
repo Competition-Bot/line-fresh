@@ -19,6 +19,11 @@ from level.one import levelone_message
 from level.two import leveltwo_message
 from level.three import levelthree_message
 from level.four import levelfour_message
+from level.five import levelfive_message
+from level.six import levelsix_message
+from level.seven import levelseven_message
+from level.eight import leveleight_message
+from level.nine import levelnine_message
 
 app = Flask(__name__)
 
@@ -69,6 +74,21 @@ def handle_message(event):
     elif((event.message.text == '前往合同廳舍' and level == 3) or event.message.text == 'test4'):
         level = 4
         levelfour_message(event)
+    elif(((event.message.text == '少了6隻' or event.message.text =='少了六隻') and level == 4) or event.message.text == 'test5'):
+        level = 5
+        levelfive_message(event)
+    elif((event.message.text == '前往雲林布袋戲館' and level == 5) or event.message.text == 'test6'):
+        level = 6
+        levelsix_message(event)
+    elif((event.message.text == '生、淨' and level == 6) or event.message.text == 'test7'):
+        level = 7
+        levelseven_message(event)
+    elif((event.message.text == '屋敷' and level == 7) or event.message.text == 'test8'):
+        level = 8
+        leveleight_message(event)
+    elif(((event.message.text == 'COOL'or event.message.text =='cool') and level == 8) or event.message.text == 'test9'):
+        level = 9
+        levelnine_message(event)
     # if(event.message.text == '開始遊戲'):
     #     line_bot_api.reply_message(
     #         event.reply_token,
@@ -126,32 +146,6 @@ def handle_message(event):
     #                 ]
     #             )
     #         ))
-
-    # elif(event.message.text == '開始2'):
-    #     line_bot_api.reply_message(
-    #         event.reply_token,
-    #         [TextSendMessage(
-    #             text="這是電台節目表，你應該還記得我們最愛聽什麼節目吧!"),
-    #          ImageSendMessage("https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg",
-    #                           "https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg"),
-    #          TemplateSendMessage(
-    #             alt_text='一台復古收音機',
-    #             template=ButtonsTemplate(
-    #                 thumbnail_image_url='https://raw.githubusercontent.com/tsaiyuyes7/LIFF_test/main/img/radio.png',
-    #                 imageAspectRatio='rectangle',
-    #                 imageSize='cover',
-    #                 imageBackgroundColor='#FFFFFF',
-    #                 text='一台復古收音機',
-    #                 actions=[
-    #                     URIAction(
-    #                         label='開啟收音機',
-    #                         uri='https://liff.line.me/1656608345-0Yx6zYOX'
-    #                     )
-    #                 ]
-    #             )
-    #         ),
-    #             TextSendMessage(text="請輸入『前往xxx』(xxx是地點名)")]
-    #     )
 
 
 @handler.add(JoinEvent, message=TextMessage)

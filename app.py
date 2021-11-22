@@ -8,7 +8,7 @@ from linebot.exceptions import (
     InvalidSignatureError
 )
 from linebot.models import (
-    MessageEvent, TextMessage, TextSendMessage, ImageSendMessage, MessageAction, URIAction, ButtonsTemplate, PostbackAction, TemplateSendMessage
+   JoinEvent, MessageEvent, TextMessage, TextSendMessage, ImageSendMessage, MessageAction, URIAction, ButtonsTemplate, PostbackAction, TemplateSendMessage
 )
 
 app = Flask(__name__)
@@ -43,7 +43,6 @@ level = 1
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     global level
-    line_bot_api.push_message('<to>', TextSendMessage(text='Hello World!'))
     if(event.message.text == '開始1'):
         line_bot_api.reply_message(
             event.reply_token,
@@ -128,36 +127,11 @@ def handle_message(event):
                 TextSendMessage(text="請輸入『前往xxx』(xxx是地點名)")]
         )
 
-# @handler.add(MessageEvent, message=TextMessage)
-# def handle_message(event):
-    # line_bot_api.reply_message(
-    #     event.reply_token,
-    #     TemplateSendMessage(
-    #         alt_text='This is a buttons template',
-    #         template=ButtonsTemplate(
-    #             thumbnail_image_url='https://ithelp.ithome.com.tw/storage/image/fight.svg',
-    #             imageAspectRatio='rectangle',
-    #             imageSize='cover',
-    #             imageBackgroundColor='#FFFFFF',
-    #             title='iThome鐵人2021',
-    #             text='Buttons template',
-    #             actions=[
-    #                 PostbackAction(
-    #                     label='postback',
-    #                     display_text='postback text',
-    #                     data='action=buy&itemid=1'
-    #                 ),
-    #                 MessageAction(
-    #                     label='message',
-    #                     text='message text'
-    #                 ),
-    #                 URIAction(
-    #                     label='uri',
-    #                     uri='http://example.com/'
-    #                 )
-    #             ]
-    #         )
-    #     ))
+
+@handler.add(JoinEvent, message=TextMessage)
+def handle_message(event):
+    line_bot_api.push_message('<to>', TextSendMessage(text='Hello World!'))
+
 
 
 if __name__ == "__main__":

@@ -40,92 +40,92 @@ def callback():
 level = 1
 
 
-@handler.add(MessageEvent, message=TextMessage)
-def handle_message(event):
-    global level
-    if(event.message.text == '開始1'):
-        line_bot_api.reply_message(
-            event.reply_token,
-            TemplateSendMessage(
-                alt_text='虎尾驛',
-                template=ButtonsTemplate(
-                    thumbnail_image_url='https://i2.wp.com/ivychi.com/wp-content/uploads/20201104123257_57.jpg',
-                    imageAspectRatio='rectangle',
-                    imageSize='cover',
-                    imageBackgroundColor='#FFFFFF',
-                    title='虎尾驛',
-                    text='虎尾驛為中華民國雲林縣虎尾鎮一已廢棄木造火車站，原是虎尾糖廠小火車車站。',
-                    actions=[
-                        MessageAction(
-                            label='查看日記',
-                            text='查看日記'
-                        ),
-                        URIAction(
-                            label='查看熱點資訊',
-                            uri='https://spot.line.me/detail/720382419873591332'
-                        )
-                    ]
-                )
-            ))
-    elif(event.message.text == '查看日記'):
-        line_bot_api.reply_message(
-            event.reply_token,
-            [TextSendMessage(
-                text="以前阿嬤常常帶我去虎尾糖廠買冰棒吃～然後坐在月台看火車～小時候我曾經在作文上寫我要當火車司機呢！"),
-             TextSendMessage(text="我最喜歡這班車！"),
-             ImageSendMessage("https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg",
-                              "https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg"),
-             TextSendMessage(text="請輸入『我搭00：00的000出發！』(00：00為時間、000為車種)")])
-    elif(event.message.text == '我搭14:00的2077出發！' or event.message.text == '我搭14：00的2077出發！' or event.message.text == '我搭14：00的2077出發!' or event.message.text == '我搭14:00的2077出發!'):
-        line_bot_api.reply_message(
-            event.reply_token,
-            TemplateSendMessage(
-                alt_text='虎尾鐵橋',
-                template=ButtonsTemplate(
-                    thumbnail_image_url='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Huwei_Dual_gauge_track_bridge_01.jpg/288px-Huwei_Dual_gauge_track_bridge_01.jpg',
-                    imageAspectRatio='rectangle',
-                    imageSize='cover',
-                    imageBackgroundColor='#FFFFFF',
-                    title='虎尾鐵橋',
-                    text='虎尾糖廠鐵橋，舊名番薯莊板仔橋，於台灣日治時期興建並於國民政府時代延建，為雲林縣縣定古蹟。',
-                    actions=[
-                        MessageAction(
-                            label='查看日記',
-                            text='查看日記'
-                        ),
-                        URIAction(
-                            label='查看熱點資訊',
-                            uri='https://spot.line.me/detail/720382419873591332'
-                        )
-                    ]
-                )
-            ))
+# @handler.add(MessageEvent, message=TextMessage)
+# def handle_message(event):
+#     global level
+#     if(event.message.text == '開始1'):
+#         line_bot_api.reply_message(
+#             event.reply_token,
+#             TemplateSendMessage(
+#                 alt_text='虎尾驛',
+#                 template=ButtonsTemplate(
+#                     thumbnail_image_url='https://i2.wp.com/ivychi.com/wp-content/uploads/20201104123257_57.jpg',
+#                     imageAspectRatio='rectangle',
+#                     imageSize='cover',
+#                     imageBackgroundColor='#FFFFFF',
+#                     title='虎尾驛',
+#                     text='虎尾驛為中華民國雲林縣虎尾鎮一已廢棄木造火車站，原是虎尾糖廠小火車車站。',
+#                     actions=[
+#                         MessageAction(
+#                             label='查看日記',
+#                             text='查看日記'
+#                         ),
+#                         URIAction(
+#                             label='查看熱點資訊',
+#                             uri='https://spot.line.me/detail/720382419873591332'
+#                         )
+#                     ]
+#                 )
+#             ))
+#     elif(event.message.text == '查看日記'):
+#         line_bot_api.reply_message(
+#             event.reply_token,
+#             [TextSendMessage(
+#                 text="以前阿嬤常常帶我去虎尾糖廠買冰棒吃～然後坐在月台看火車～小時候我曾經在作文上寫我要當火車司機呢！"),
+#              TextSendMessage(text="我最喜歡這班車！"),
+#              ImageSendMessage("https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg",
+#                               "https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg"),
+#              TextSendMessage(text="請輸入『我搭00：00的000出發！』(00：00為時間、000為車種)")])
+#     elif(event.message.text == '我搭14:00的2077出發！' or event.message.text == '我搭14：00的2077出發！' or event.message.text == '我搭14：00的2077出發!' or event.message.text == '我搭14:00的2077出發!'):
+#         line_bot_api.reply_message(
+#             event.reply_token,
+#             TemplateSendMessage(
+#                 alt_text='虎尾鐵橋',
+#                 template=ButtonsTemplate(
+#                     thumbnail_image_url='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Huwei_Dual_gauge_track_bridge_01.jpg/288px-Huwei_Dual_gauge_track_bridge_01.jpg',
+#                     imageAspectRatio='rectangle',
+#                     imageSize='cover',
+#                     imageBackgroundColor='#FFFFFF',
+#                     title='虎尾鐵橋',
+#                     text='虎尾糖廠鐵橋，舊名番薯莊板仔橋，於台灣日治時期興建並於國民政府時代延建，為雲林縣縣定古蹟。',
+#                     actions=[
+#                         MessageAction(
+#                             label='查看日記',
+#                             text='查看日記'
+#                         ),
+#                         URIAction(
+#                             label='查看熱點資訊',
+#                             uri='https://spot.line.me/detail/720382419873591332'
+#                         )
+#                     ]
+#                 )
+#             ))
 
-    elif(event.message.text == '開始2'):
-        line_bot_api.reply_message(
-            event.reply_token,
-            [TextSendMessage(
-                text="這是電台節目表，你應該還記得我們最愛聽什麼節目吧!"),
-             ImageSendMessage("https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg",
-                              "https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg"),
-             TemplateSendMessage(
-                alt_text='一台復古收音機',
-                template=ButtonsTemplate(
-                    thumbnail_image_url='https://raw.githubusercontent.com/tsaiyuyes7/LIFF_test/main/img/radio.png',
-                    imageAspectRatio='rectangle',
-                    imageSize='cover',
-                    imageBackgroundColor='#FFFFFF',
-                    text='一台復古收音機',
-                    actions=[
-                        URIAction(
-                            label='開啟收音機',
-                            uri='https://liff.line.me/1656608345-0Yx6zYOX'
-                        )
-                    ]
-                )
-            ),
-                TextSendMessage(text="請輸入『前往xxx』(xxx是地點名)")]
-        )
+#     elif(event.message.text == '開始2'):
+#         line_bot_api.reply_message(
+#             event.reply_token,
+#             [TextSendMessage(
+#                 text="這是電台節目表，你應該還記得我們最愛聽什麼節目吧!"),
+#              ImageSendMessage("https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg",
+#                               "https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg"),
+#              TemplateSendMessage(
+#                 alt_text='一台復古收音機',
+#                 template=ButtonsTemplate(
+#                     thumbnail_image_url='https://raw.githubusercontent.com/tsaiyuyes7/LIFF_test/main/img/radio.png',
+#                     imageAspectRatio='rectangle',
+#                     imageSize='cover',
+#                     imageBackgroundColor='#FFFFFF',
+#                     text='一台復古收音機',
+#                     actions=[
+#                         URIAction(
+#                             label='開啟收音機',
+#                             uri='https://liff.line.me/1656608345-0Yx6zYOX'
+#                         )
+#                     ]
+#                 )
+#             ),
+#                 TextSendMessage(text="請輸入『前往xxx』(xxx是地點名)")]
+#         )
 
 
 @handler.add(JoinEvent, message=TextMessage)

@@ -45,16 +45,17 @@ def callback():
     return 'OK'
 
 
-level = 0
-
+level = 'init'
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     global level
-    if(event.message.text == 'start' and level == 0):
+    if(event.message.text == 'start' and level == 'init'):
         start_message(event)
-    elif(event.message.text == '開始遊戲' and level == 0):
+        level = 'start'
+    elif(event.message.text == '開始遊戲' and level == 'start'):
         levelzero_message(event)
+        level = 0
     elif(event.message.text == '打開日記' and level == 0):
         level = 1
         levelone_message(event)

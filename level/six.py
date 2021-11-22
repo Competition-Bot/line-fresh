@@ -29,10 +29,10 @@ def levelsix_message(event):
                     )
                 ),
                 TextSendMessage(
-                    text="「日記4」\n史艷文，看來你也還記得我們一起創造的的「虎尾大儒俠」呢！"),
+                    text="「日記4」\n\n史艷文，看來你也還記得我們一起創造的的「虎尾大儒俠」呢！"),
                 ImageSendMessage("https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg",
                                  "https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg"),
                 TextSendMessage(
-                    text="（參考生旦淨末丑的角色說明，推敲小春與小花自創的故事裡是「生、淨」的角色是什麼。）\n（請輸入『生、淨』, 按照順序回答人物名）")
+                    text="(參考生旦淨末丑的角色說明，推敲小春與小花自創的故事裡是「生、淨」的角色是什麼。)\n(（)請輸入『生、淨』，按照順序回答人物名)")
             ]
         ))

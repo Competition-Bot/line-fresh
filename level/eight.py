@@ -31,7 +31,7 @@ def leveleight_message(event):
                     )
                 ),
                 TextSendMessage(
-                    text="「日記5」\n我們每次下課後常常在官邸畫畫呢,一邊吃我們最愛的烤地瓜,一邊想我們的『虎尾大儒俠』,啊!我還記得我把結局放在官邸的門牌後面喔！"),
+                    text="「日記5」\n\n我們每次下課後常常在官邸畫畫呢，一邊吃我們最愛的烤地瓜，一邊想我們的『虎尾大儒俠』，啊!我還記得我把結局放在官邸的門牌後面喔！"),
                 ImageSendMessage("https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg",
                                  "https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg"),
                 TextSendMessage(

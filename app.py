@@ -12,6 +12,7 @@ from linebot.models import (
 )
 
 from api.lineBotApi import line_bot_api
+
 from level.start import start_message
 from level.zero import levelzero_message
 from level.one import levelone_message
@@ -50,7 +51,7 @@ level = 0
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     global level
-    if(event.message.text == 'start' and level == 0):
+    if(event.message.text == 'start'):
         start_message(event)
     elif(event.message.text == '開始遊戲' and level == 0):
         levelzero_message(event)

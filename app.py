@@ -8,11 +8,16 @@ from linebot.exceptions import (
     InvalidSignatureError
 )
 from linebot.models import (
-   JoinEvent, MessageEvent, TextMessage, TextSendMessage, ImageSendMessage, MessageAction, URIAction, ButtonsTemplate, PostbackAction, TemplateSendMessage
+    JoinEvent, MessageEvent, TextMessage, TextSendMessage, ImageSendMessage, MessageAction, URIAction, ButtonsTemplate, PostbackAction, TemplateSendMessage
 )
 
 from api.lineBotApi import line_bot_api
-from level.init import init_message
+from level.start import start_message
+from level.zero import levelzero_message
+from level.one import levelone_message
+from level.two import leveltwo_message
+from level.three import levelthree_message
+from level.four import levelfour_message
 
 app = Flask(__name__)
 
@@ -39,7 +44,7 @@ def callback():
     return 'OK'
 
 
-level = 1
+level = 0
 
 
 @handler.add(MessageEvent, message=TextMessage)
@@ -47,6 +52,15 @@ def handle_message(event):
     global level
     if(event.message.text == 'init'):
         init_message(event)
+    elif(event.message.text == '開始遊戲'):
+        start_message(event)
+        level = 0
+    elif(event.message.text == '打開日記' and level == 0):
+        levelone_message(event)
+        level = 1
+    elif(event.message.text == '2B' and level == 1):
+        leveltwo_message(event)
+        level = 2
     # if(event.message.text == '開始遊戲'):
     #     line_bot_api.reply_message(
     #         event.reply_token,
@@ -135,7 +149,6 @@ def handle_message(event):
 @handler.add(JoinEvent, message=TextMessage)
 def handle_message(event):
     line_bot_api.push_message('<to>', TextSendMessage(text='Hello World!'))
-
 
 
 if __name__ == "__main__":

@@ -14,12 +14,12 @@ def leveltwo_message(event):
                 TemplateSendMessage(
                     alt_text='虎尾厝沙龍',
                     template=ButtonsTemplate(
-                        thumbnail_image_url='https://i2.wp.com/ivychi.com/wp-content/uploads/20201104123257_57.jpg',
+                        thumbnail_image_url='https://pic.pimg.tw/as660707/1371195583-2324753213.jpg',
                         imageAspectRatio='rectangle',
                         imageSize='cover',
                         imageBackgroundColor='#FFFFFF',
                         title='虎尾厝沙龍',
-                        text='虎尾厝沙龍，原為1940年吳中醫師興建的「和洋式住宅」，現為「獨立冊店」。',
+                        text='虎尾厝沙龍，原為1940年吳中醫師興建的「和洋式住宅」，現為「獨立冊店」，積極關注台灣社會及世界。',
                         actions=[
                             URIAction(
                                 label='查看熱點資訊',
@@ -29,7 +29,7 @@ def leveltwo_message(event):
                     )
                 ),
                 TextSendMessage(
-                    text="原來這裡就是虎尾厝沙龍呀，啊！這個是藝術家王忠龍的石頭鳥鐵雕圍牆"),
+                    text="原來這裡就是虎尾厝沙龍呀，啊!這個是藝術家王忠龍的石頭鳥鐵雕圍牆"),
                 ImageSendMessage("https://i.imgur.com/IU3w7Kf.png",
                                  "https://i.imgur.com/IU3w7Kf.png"),
                 TextSendMessage(

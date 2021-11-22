@@ -23,9 +23,9 @@ def levelzero_message(event):
                         text='陳舊的日記本',
                         actions=[
                             MessageAction(
-                                label='開啟日記',
-                                text='開啟日記'
-                            ),
+                                label='打開日記',
+                                text='打開日記'
+                            )
                         ]
                     )
                 )

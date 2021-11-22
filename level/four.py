@@ -29,11 +29,11 @@ def levelfour_message(event):
                     )
                 ),
                 TextSendMessage(
-                    text="「日記3」 %0D%0A 你找對地方了，史艷文，還記得我們以前常常大鬧警局嗎，還會偷偷溜消防廳的天梯呢，嘻嘻 %0D%0A 我偷偷留了下一個地方的線索，合同廳舍裡面有一個會飛的動物呦！"),
+                    text="「日記3」\n你找對地方了，史艷文，還記得我們以前常常大鬧警局嗎，還會偷偷溜消防廳的天梯呢，嘻嘻\n我偷偷留了下一個地方的線索，合同廳舍裡面有一個會飛的動物呦！"),
                 TemplateSendMessage(
                     alt_text='合同廳舍',
                     template=ButtonsTemplate(
-                        text='你還記得我們少了幾支羽毛嗎? %0D%0A (請輸入『少了O支』)',
+                        text='你還記得我們少了幾支羽毛嗎?\n(請輸入『少了O支』)',
                         actions=[
                             URIAction(
                                 label='打開相機辨識尋找物件',

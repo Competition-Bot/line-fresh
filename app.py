@@ -39,6 +39,7 @@ def callback():
 
 level = 1
 
+line_bot_api.push_message('<to>', TextSendMessage(text='Hello World!'))
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):

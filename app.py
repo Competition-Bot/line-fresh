@@ -50,17 +50,22 @@ level = 0
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     global level
-    if(event.message.text == 'init'):
-        init_message(event)
-    elif(event.message.text == '開始遊戲'):
+    if(event.message.text == 'start' and level == 0):
         start_message(event)
-        level = 0
+    elif(event.message.text == '開始遊戲' and level == 0):
+        levelzero_message(event)
     elif(event.message.text == '打開日記' and level == 0):
-        levelone_message(event)
         level = 1
+        levelone_message(event)
     elif(event.message.text == '2B' and level == 1):
-        leveltwo_message(event)
         level = 2
+        leveltwo_message(event)
+    elif(event.message.text == '有6隻石頭鳥' and level == 2):
+        level = 3
+        levelthree_message(event)
+    elif(event.message.text == '前往合同廳舍' and level == 3):
+        level = 4
+        levelfour_message(event)
     # if(event.message.text == '開始遊戲'):
     #     line_bot_api.reply_message(
     #         event.reply_token,

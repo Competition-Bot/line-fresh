@@ -2,8 +2,10 @@ from linebot.models import (
     MessageAction, ButtonsTemplate, TemplateSendMessage
 )
 
+from api.lineBotApi import line_bot_api
 
-def init_message(line_bot_api, event):
+
+def init_message(event):
     line_bot_api.reply_message(
         event.reply_token,
         TemplateSendMessage(

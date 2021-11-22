@@ -45,7 +45,7 @@ level = 1
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     global level
-    if(event.message.text == '虎尾手札 - 穿梭巷弄的少女'):
+    if(event.message.text == 'init'):
         init_message(event)
     # if(event.message.text == '開始遊戲'):
     #     line_bot_api.reply_message(

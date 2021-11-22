@@ -57,13 +57,13 @@ def handle_message(event):
     elif((event.message.text == '開始遊戲' and level == 'start') or event.message.text == 'test0'):
         levelzero_message(event)
         level = 0
-    elif((event.message.text == '打開日記' and level == 0) or event.message.text == 'test1'):
+    elif((event.message.text == '開啟日記' and level == 0) or event.message.text == 'test1'):
         level = 1
         levelone_message(event)
     elif((event.message.text == '2B' and level == 1) or event.message.text == 'test2'):
         level = 2
         leveltwo_message(event)
-    elif((event.message.text == '有6隻石頭鳥' and level == 2) or event.message.text == 'test3'):
+    elif((event.message.text == ('有6隻石頭鳥'or'有六隻石頭鳥') and level == 2) or event.message.text == 'test3'):
         level = 3
         levelthree_message(event)
     elif((event.message.text == '前往合同廳舍' and level == 3) or event.message.text == 'test4'):

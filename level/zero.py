@@ -20,12 +20,11 @@ def levelzero_message(event):
                         imageAspectRatio='rectangle',
                         imageSize='cover',
                         imageBackgroundColor='#FFFFFF',
-                        title='陳舊的日記本',
                         text='陳舊的日記本',
                         actions=[
                             MessageAction(
-                                label='打開日記',
-                                text='打開日記'
+                                label='開啟日記',
+                                text='開啟日記'
                             ),
                         ]
                     )

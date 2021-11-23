@@ -12,7 +12,7 @@ def start_message(event):
                 alt_text='虎尾手札 - 穿梭巷弄的少女',
                 contents={
                     "type": "bubble",
-                    "size": "kilo",
+                    "size": "mega",
                     "hero": {
                         "type": "image",
                         "url": "https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg",

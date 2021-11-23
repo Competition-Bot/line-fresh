@@ -148,7 +148,7 @@ def handle_message(event):
             ))
 
 
-@ handler.add(JoinEvent, message=TextMessage)
+@handler.add(JoinEvent, message=TextMessage)
 def handle_message(event):
     line_bot_api.push_message('<to>', TextSendMessage(text='Hello World!'))
 

@@ -107,9 +107,9 @@ def leveltwelve_message(event):
                 }),
                 ImageSendMessage("https://i.imgur.com/pELde59.jpg",
                                  "https://i.imgur.com/pELde59.jpg"),
-                ImageSendMessage("https://i.imgur.com/bcf4Npy.png",
-                                 "https://i.imgur.com/bcf4Npy.png"),
+                ImageSendMessage("https://i.imgur.com/82X60Pb.png",
+                                 "https://i.imgur.com/82X60Pb.png"),
                 TextSendMessage(
-                    text="請輸入『我搭00:00的000出發!』\n\n00:00為時間、000為車種"),
+                    text="請輸入『我搭00:00的000出發!』\n00:00為時間、000為車種"),
             ]
         )

@@ -35,36 +35,44 @@ def leveleleven_message(event):
                     alt_text='11',
                     contents=CarouselContainer(
                         contents=[BubbleContainer(
-                            size="micro",
-                            body={
-                                "type": "box",
-                                "layout": "vertical",
-                                "contents": [
-                                        {
-                                            "type": "image",
-                                            "url": "https://i.imgur.com/xnRHvyW.png",
-                                            "size": "full",
-                                            "aspectMode": "cover",
-                                            "gravity": "center"
-                                        }
-                                ]
-                            }
-                        ), BubbleContainer(
-                            size="micro",
-                            body={
-                                "type": "box",
-                                "layout": "vertical",
-                                "contents": [
-                                        {
-                                            "type": "image",
-                                            "url": "https://i.imgur.com/xnRHvyW.png",
-                                            "size": "full",
-                                            "aspectMode": "cover",
-                                            "gravity": "center"
-                                        }
-                                ]
-                            }
-                        )]
+                        size="kilo",
+                        direction="ltr",
+                        body={
+                            "type": "box",
+                            "layout": "vertical",
+                            "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "「這是電台節目表，你應該還記得我們最愛聽什麼節目吧」",
+                                    "wrap": True,
+                                },
+                                {
+                                    "type": "text",
+                                    "text": " 小春留",
+                                    "align": "end"
+                                }
+                            ]
+                        }
+                    ),BubbleContainer(
+                        size="kilo",
+                        direction="ltr",
+                        body={
+                            "type": "box",
+                            "layout": "vertical",
+                            "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "「這是電台節目表，你應該還記得我們最愛聽什麼節目吧」",
+                                    "wrap": True,
+                                },
+                                {
+                                    "type": "text",
+                                    "text": " 小春留",
+                                    "align": "end"
+                                }
+                            ]
+                        }
+                    )]
                     )
                 ),
                 TemplateSendMessage(

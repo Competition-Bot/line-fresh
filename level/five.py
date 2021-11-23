@@ -12,7 +12,7 @@ def levelfive_message(event):
         event.reply_token,
         [
             FlexSendMessage(
-                alt_text='start',
+                alt_text='five',
                 contents=BubbleContainer(
                     size="kilo",
                     direction="ltr",

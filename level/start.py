@@ -28,21 +28,21 @@ def start_message(event):
                                 "type": "text",
                                 "text": "虎尾手札 - 穿梭巷弄的少女",
                                 "wrap": True,
-                                "size": "md",
+                                "size": "lg",
                                 "weight": "bold"
                             },
                             {
                                 "type": "text",
                                 "text": "小春與小花是要好的朋友，她們喜歡在巷弄間到處探險，藏著她倆的秘密，升上高中後小春將搬離虎尾去外地，因此她將策劃一場紀念她們友誼的冒險...",
                                 "wrap": True,
-                                "size": "sm",
-                                "margin": "sm"
+                                "size": "md",
+                                "margin": "md"
                             },
                             {
                                 "type": "text",
                                 "text": "玩家將扮演撿到日記本的角色，將依循日記的指示探索虎尾的巷弄，進而發現小春與小花之間的點點滴滴。",
                                 "wrap": True,
-                                "size": "sm",
+                                "size": "md",
                                 "margin": "sm"
                             }
                         ],

@@ -92,5 +92,5 @@ def levelone_message(event):
                 ImageSendMessage("https://i.imgur.com/lxu1dMG.png",
                                  "https://i.imgur.com/lxu1dMG.png"),
                 TextSendMessage(
-                text="請輸入『OO』\n前面為數字，後面是英文大寫字母"),
+                text="( 請輸入『OO』，前面為數字，後面是英文大寫字母 )"),
              ]))

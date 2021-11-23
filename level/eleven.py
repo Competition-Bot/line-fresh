@@ -49,7 +49,22 @@ def leveleleven_message(event):
                                         }
                                 ]
                             }
-                        ), ]
+                        ), BubbleContainer(
+                            size="micro",
+                            body={
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [
+                                        {
+                                            "type": "image",
+                                            "url": "https://i.imgur.com/xnRHvyW.png",
+                                            "size": "full",
+                                            "aspectMode": "cover",
+                                            "gravity": "center"
+                                        }
+                                ]
+                            }
+                        )]
                     )
                 ),
                 TemplateSendMessage(

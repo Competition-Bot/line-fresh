@@ -133,46 +133,41 @@ def handle_message(event):
                         body=BoxComponent(
                             layout="vertical",
                             contents=[
-                                TextComponent(
-                                    text="虎尾手札 - 穿梭巷弄的少女",
-                                    weight="bold",
-                                    size="md"
-                                ),
                                 BoxComponent(
                                     layout="vertical",
                                     margin="lg",
                                     spacing="sm",
                                     contents=[
-                                            {
-                                                "type": "text",
-                                                "text": "虎尾手札 - 穿梭巷弄的少女",
-                                                "weight": "bold",
-                                                "size": "md"
-                                            },
                                         {
-                                                "type": "box",
-                                                "layout": "vertical",
-                                                "margin": "lg",
-                                                "spacing": "sm",
-                                                "contents": [
-                                                    {
-                                                        "type": "box",
-                                                        "layout": "baseline",
-                                                        "spacing": "sm",
-                                                        "contents": [
-                                                            {
-                                                                "type": "text",
-                                                                "text": "小春與小花是要好的朋友，她們喜歡在巷弄間到處探險，藏著她倆的秘密，升上高中後小春將搬離虎尾去外地，因此她將策劃一場紀念她們友誼的冒險...",
-
-                                                                "color": "#666666",
-                                                                "size": "sm",
-                                                                "flex": 5
-                                                            }
-                                                        ]
-                                                    },
-                                                ]
-                                            }
-                                    ]
+                                            "type": "text",
+                                            "text": "虎尾手札 - 穿梭巷弄的少女",
+                                            "weight": "bold",
+                                            "size": "md"
+                                        },
+                                        {
+                                            "type": "box",
+                                            "layout": "vertical",
+                                            "margin": "lg",
+                                            "spacing": "sm",
+                                            "contents": [
+                                                {
+                                                    "type": "box",
+                                                    "layout": "baseline",
+                                                    "spacing": "sm",
+                                                    "contents": [
+                                                        {
+                                                            "type": "text",
+                                                            "text": "小春與小花是要好的朋友，她們喜歡在巷弄間到處探險，藏著她倆的秘密，升上高中後小春將搬離虎尾去外地，因此她將策劃一場紀念她們友誼的冒險...",
+                                                            "wrap": 'true',
+                                                            "color": "#666666",
+                                                            "size": "sm",
+                                                            "flex": 5
+                                                        }
+                                                    ]
+                                                },
+                                            ]
+                                        }
+                                     ]
                                 )
                             ]
                         )

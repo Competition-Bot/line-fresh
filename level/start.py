@@ -16,6 +16,7 @@ def start_message(event):
                     hero=ImageComponent(
                         url="https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg",
                         size="full",
+                        aspectRatio="2:1",
                         aspectMode="cover",
                     ),
                     body=BoxComponent(

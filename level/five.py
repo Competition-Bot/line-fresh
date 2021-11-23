@@ -22,26 +22,42 @@ def levelfive_message(event):
                     contents=BubbleContainer(
                         hero={
                             "type": "image",
-                            "url": "https://i.imgur.com/gi0z0bv.png",
+                            "url": "https://i.imgur.com/4F59BsC.png",
                             "size": "full",
                             "aspectRatio": "20:13",
                             "aspectMode": "fit",
-                            "action": {
-                                "type": "uri",
-                                "uri": "http://linecorp.com/"
-                            }
                         },
                         body=BoxComponent(
                             layout="vertical",
                             contents=[
                                 {
                                     "type": "text",
-                                    "text": "一台2復古的收音機",
+                                    "text": "一台復古的收音機",
                                     "weight": "bold",
                                     "size": "lg"
                                 }
                             ]
                         ),
+                        footer=BoxComponent(
+                            layout="vertical",
+                            spacing="sm",
+                            contents=[
+                                {
+                                    "type": "button",
+                                    "style": "link",
+                                    "height": "sm",
+                                    "action": {
+                                    "type": "uri",
+                                    "label": "打開收音機",
+                                    "uri": "https://liff.line.me/1656608345-0Yx6zYOX"
+                                    }
+                                },
+                                {
+                                    "type": "spacer",
+                                    "size": "sm"
+                                }
+                            ]
+                        )
                     )
                 ),
                 TextSendMessage(

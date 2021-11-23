@@ -36,33 +36,12 @@ def levelfive_message(event):
                             contents=[
                                 {
                                     "type": "text",
-                                    "text": "一台復古的收音機",
+                                    "text": "一台2復古的收音機",
                                     "weight": "bold",
                                     "size": "lg"
                                 }
                             ]
                         ),
-                        footer=BoxComponent(
-                            layout="vertical",
-                            spacing="sm",
-                            contents=[
-                                {
-                                    "type": "button",
-                                    "style": "link",
-                                    "height": "sm",
-                                    "action": {
-                                    "type": "uri",
-                                    "label": "打開收音機",
-                                    "uri": "https://liff.line.me/1656608345-0Yx6zYOX"
-                                    }
-                                },
-                                {
-                                    "type": "spacer",
-                                    "size": "sm"
-                                }
-                            ],
-                            flex=0
-                        )
                     )
                 ),
                 TextSendMessage(

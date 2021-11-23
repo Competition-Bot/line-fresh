@@ -32,75 +32,27 @@ def leveleleven_message(event):
                 TextSendMessage(
                     text="「日記7」\n\n這裡好多漂亮的裙子喔！幸好我們跟老闆娘阿姨很熟，可以來這裡玩！我們最喜歡在這裡想像我們結婚的樣子了！說好了我們要當彼此的伴娘喔！"),
                 FlexSendMessage(
-                    alt_text='11',
+                    alt_text='start',
                     contents=BubbleContainer(
-                        type="bubble",
-                        size="micro",
+                        size="kilo",
+                        direction="ltr",
                         body={
                             "type": "box",
-                                    "layout": "vertical",
-                                    "contents": [
-                                        {
-                                            "type": "image",
-                                            "url": "https://i.imgur.com/xnRHvyW.png",
-                                            "size": "full",
-                                            "aspectMode": "cover",
-                                            "gravity": "center"
-                                        },
-                                        {
-                                            "type": "box",
-                                            "layout": "vertical",
-                                            "contents": [],
-                                            "position": "absolute",
-                                            "background": {
-                                                "type": "linearGradient",
-                                                "angle": "0deg",
-                                                "endColor": "#00000000",
-                                                "startColor": "#00000099"
-                                            },
-                                            "width": "100%",
-                                            "height": "40%",
-                                            "offsetBottom": "0px",
-                                            "offsetStart": "0px",
-                                            "offsetEnd": "0px"
-                                        },
-                                        {
-                                            "type": "box",
-                                            "layout": "horizontal",
-                                            "contents": [
-                                                {
-                                                    "type": "box",
-                                                    "layout": "vertical",
-                                                    "contents": [
-                                                        {
-                                                            "type": "box",
-                                                            "layout": "horizontal",
-                                                            "contents": [
-                                                                {
-                                                                    "type": "text",
-                                                                    "text": "A 新茜娜面霜",
-                                                                    "size": "md",
-                                                                    "color": "#ffffff",
-                                                                    "align": "center",
-                                                                    "weight": "bold"
-                                                                }
-                                                            ]
-                                                        }
-                                                    ],
-                                                    "spacing": "xs"
-                                                }
-                                            ],
-                                            "position": "absolute",
-                                            "offsetBottom": "0px",
-                                            "offsetStart": "0px",
-                                            "offsetEnd": "0px",
-                                            "paddingAll": "20px"
-                                        }
-                                    ],
-                            "paddingAll": "0px"
+                            "layout": "vertical",
+                            "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "「這是電台節目表，你應該還記得我們最愛聽什麼節目吧」",
+                                    "wrap": True,
+                                },
+                                {
+                                    "type": "text",
+                                    "text": " 小春留",
+                                    "align": "end"
+                                }
+                            ]
                         }
-                    ),
-                ),
+                    )),
                 TemplateSendMessage(
                     alt_text='勘板模糊圖',
                     template=ButtonsTemplate(

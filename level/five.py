@@ -12,7 +12,7 @@ def levelfive_message(event):
         event.reply_token,
         [
             FlexSendMessage(
-                alt_text='five',
+                alt_text='小春留言',
                 contents=BubbleContainer(
                     size="kilo",
                     direction="ltr",
@@ -27,7 +27,7 @@ def levelfive_message(event):
                                 },
                             {
                                     "type": "text",
-                                    "text": " 小春留",
+                                    "text": "小春留",
                                     "align": "end"
                                     }
                         ]
@@ -36,7 +36,7 @@ def levelfive_message(event):
             ImageSendMessage("https://i.imgur.com/iUKYj9Z.jpg",
                              "https://i.imgur.com/iUKYj9Z.jpg"),
             FlexSendMessage(
-                alt_text='start',
+                alt_text='一台復古的收音機',
                 contents=BubbleContainer(
                     size="kilo",
                     hero={

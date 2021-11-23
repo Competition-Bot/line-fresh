@@ -40,6 +40,7 @@ def levelfive_message(event):
                 FlexSendMessage(
                     alt_text='start',
                     contents=BubbleContainer(
+                        size="kilo",
                         hero={
                             "type": "image",
                             "url": "https://i.imgur.com/4F59BsC.png",

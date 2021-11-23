@@ -1,5 +1,5 @@
 from linebot.models import (
-    TextSendMessage,  FlexSendMessage, CarouselContainer, BoxComponent, TemplateSendMessage, ButtonsTemplate, URIAction
+    TextSendMessage,  FlexSendMessage, CarouselContainer, BubbleContainer, TemplateSendMessage, ButtonsTemplate, URIAction
 )
 
 from api.lineBotApi import line_bot_api
@@ -35,10 +35,9 @@ def leveleleven_message(event):
                     alt_text='start',
                     contents=CarouselContainer(
                         contents=[
-                            {
-                                "type": "bubble",
-                                "size": "micro",
-                                "body": {
+                            BubbleContainer(
+                                size="micro",
+                                body={
                                     "type": "box",
                                     "layout": "vertical",
                                     "contents": [
@@ -101,11 +100,10 @@ def leveleleven_message(event):
                                     ],
                                     "paddingAll": "0px"
                                 }
-                            },
-                            {
-                                "type": "bubble",
-                                "size": "micro",
-                                "body": {
+                            ),
+                            BubbleContainer(
+                                size="micro",
+                                body={
                                     "type": "box",
                                     "layout": "vertical",
                                     "contents": [
@@ -169,11 +167,10 @@ def leveleleven_message(event):
                                     ],
                                     "paddingAll": "0px"
                                 }
-                            },
-                            {
-                                "type": "bubble",
-                                "size": "micro",
-                                "body": {
+                            ),
+                            BubbleContainer(
+                                size="micro",
+                                body={
                                     "type": "box",
                                     "layout": "vertical",
                                     "contents": [
@@ -237,11 +234,10 @@ def leveleleven_message(event):
                                     ],
                                     "paddingAll": "0px"
                                 }
-                            },
-                            {
-                                "type": "bubble",
-                                "size": "micro",
-                                "body": {
+                            ),
+                            BubbleContainer(
+                                size="micro",
+                                body={
                                     "type": "box",
                                     "layout": "vertical",
                                     "contents": [
@@ -305,11 +301,10 @@ def leveleleven_message(event):
                                     ],
                                     "paddingAll": "0px"
                                 }
-                            },
-                            {
-                                "type": "bubble",
-                                "size": "micro",
-                                "body": {
+                            ),
+                            BubbleContainer(
+                                size="micro",
+                                body={
                                     "type": "box",
                                     "layout": "vertical",
                                     "contents": [
@@ -373,7 +368,7 @@ def leveleleven_message(event):
                                     ],
                                     "paddingAll": "0px"
                                 }
-                            }
+                            )
                         ]
                     )
                 ),

@@ -10,7 +10,7 @@ def leveleleven_message(event):
         event.reply_token,
         [
             FlexSendMessage(
-                alt_text='日記7',
+                alt_text='虎珍堂',
                 contents={
                     "type": "bubble",
                     "size": "kilo",
@@ -93,15 +93,39 @@ def leveleleven_message(event):
                         ]
                     }
                 }),
-            TemplateSendMessage(
+            FlexSendMessage(
                 alt_text='看板模糊圖',
-                template=ButtonsTemplate(
-                    thumbnail_image_url='https://i.imgur.com/0Y7WXxz.jpg',
-                    imageAspectRatio='rectangle',
-                    imageSize='cover',
-                    imageBackgroundColor='#FFFFFF',
-                    text='請依照虎珍糖右手邊的看板獲得線索，輸入『OOOOO』，OOOOO是五個英文字母',
-                )
-            )
+                contents={
+                    "type": "bubble",
+                    "size": "kilo",
+                    "hero": {
+                        "type": "image",
+                        "url": "https://i.imgur.com/0Y7WXxz.jpg",
+                        "size": "full",
+                        "aspectMode": "cover",
+                    },
+                    "body": {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [
+                            {
+                                "type": "text",
+                                "text": "看板模糊圖",
+                                "wrap": True,
+                                "size": "md",
+                                "weight": "bold"
+                            },
+                            {
+                                "type": "text",
+                                "text": "請依照虎珍糖右手邊的看板獲得線索，輸入『OOOOO』，OOOOO是五個英文字母",
+                                "wrap": True,
+                                "size": "sm",
+                                "margin": "sm"
+                            }
+                        ],
+                        "offsetTop": "none",
+                        "paddingAll": "lg"
+                    }
+                }),
         ]
     )

@@ -34,7 +34,14 @@ def leveltwelve_message(event):
                             },
                             {
                                 "type": "text",
-                                "text": "虎尾驛為中華民國雲林縣虎尾鎮一已廢棄木造火車站，原是虎尾糖廠小火車車站，亦為糖鐵北港線、雲虎線、西螺線、崙背線及莿桐線等的重要車站。\n該建築於2010年1月15日公告為歷史建築，現在用作虎尾遊客中心",
+                                "text": "虎尾驛為中華民國雲林縣虎尾鎮一已廢棄木造火車站，原是虎尾糖廠小火車車站，亦為糖鐵北港線、雲虎線、西螺線、崙背線及莿桐線等的重要車站。",
+                                "wrap": True,
+                                "size": "sm",
+                                "margin": "sm"
+                            },
+                            {
+                                "type": "text",
+                                "text": "該建築於2010年1月15日公告為歷史建築，現在用作虎尾遊客中心",
                                 "wrap": True,
                                 "size": "sm",
                                 "margin": "sm"
@@ -92,8 +99,8 @@ def leveltwelve_message(event):
                                 "type": "text",
                                 "text": "我最喜歡這班車！",
                                 "wrap": True,
-                                "margin": "md",
-                                "size": "sm"
+                                "margin": "sm",
+                                "size": "md"
                             }
                         ]
                     }

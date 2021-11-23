@@ -15,9 +15,8 @@ def levelfive_message(event):
             [
                 FlexSendMessage(
                     alt_text='start',
-                    contents=BubbleContainer({
-                        "type": "bubble",
-                        "body": {
+                    contents=BubbleContainer(
+                        body={
                             "type": "box",
                             "layout": "vertical",
                             "contents": [
@@ -33,7 +32,7 @@ def levelfive_message(event):
                                 }
                             ]
                         }
-                    })),
+                    )),
                 ImageSendMessage("https://i.imgur.com/iUKYj9Z.jpg",
                                  "https://i.imgur.com/iUKYj9Z.jpg"),
                 FlexSendMessage(
@@ -75,29 +74,7 @@ def levelfive_message(event):
                         )
                     )
                 ),
-                FlexSendMessage(
-                    alt_text='start',
-                    contents=BubbleContainer({
-                        "type": "bubble",
-                        "body": {
-                            "type": "box",
-                            "layout": "vertical",
-                            "contents": [
-                                {
-                                    "type": "text",
-                                    "text": "輸入『前往0000』,0000是地點名稱,00數量僅供參考",
-                                    "color": "#666666",
-                                    "wrap": True
-                                },
-                                {
-                                    "type": "text",
-                                    "text": "線索在合同廳舍的門牌號碼中,透過liff輸入正確的收音機頻道",
-                                    "color": "#666666",
-                                    "wrap": True,
-                                    "margin": "md"
-                                }
-                            ]
-                        }
-                    })),
+                TextSendMessage(
+                    text="(輸入『前往0000』，0000是地點名稱，00數量僅供參考)\n\n(線索在合同廳舍的門牌號碼中，輸入正確的收音機頻道)")
             ]
         ))

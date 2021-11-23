@@ -113,7 +113,7 @@ def handle_message(event):
     elif((event.message.text == '3' and level == '13-2')):
         level = '13-3'
         levelthirteen_three_message(event)
-    elif((event.message.text == '五分車' and level == '13-3') or event.message.text == 'test10'):
+    elif((event.message.text == '五分車' and level == '13-3') or event.message.text == 'end'):
         level = 'end'
         levelend_message(event)
 

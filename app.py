@@ -101,7 +101,7 @@ def handle_message(event):
     elif((event.message.text == '前往虎珍堂' and level == '10') or event.message.text == 'test11'):
         level = '11'
         leveleleven_message(event)
-    elif((event.message.text == 'EADCB' and level == '11') or event.message.text == 'test12'):
+    elif(((event.message.text == 'EADCB' or event.message.text == 'eadcb') and level == '11') or event.message.text == 'test12'):
         level = '12'
         leveltwelve_message(event)
     elif(((event.message.text == '我搭14:00的區間車出發' or event.message.text == '我搭14：00的區間車出發') and level == '12') or event.message.text == 'test13'):

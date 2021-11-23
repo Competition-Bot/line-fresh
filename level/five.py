@@ -16,6 +16,8 @@ def levelfive_message(event):
                 FlexSendMessage(
                     alt_text='start',
                     contents=BubbleContainer(
+                        size="kilo",
+                        direction="ltr",
                         body={
                             "type": "box",
                             "layout": "vertical",

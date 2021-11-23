@@ -34,13 +34,12 @@ def leveleleven_message(event):
                 FlexSendMessage(
                     alt_text='11',
                     contents=CarouselContainer(
-                        contents=
-                            BubbleContainer(
-                                size="micro",
-                                body={
-                                    "type": "box",
-                                    "layout": "vertical",
-                                    "contents": [
+                        contents=[BubbleContainer(
+                            size="micro",
+                            body={
+                                "type": "box",
+                                "layout": "vertical",
+                                "contents": [
                                         {
                                             "type": "image",
                                             "url": "https://i.imgur.com/xnRHvyW.png",
@@ -48,11 +47,9 @@ def leveleleven_message(event):
                                             "aspectMode": "cover",
                                             "gravity": "center"
                                         }
-                                    ],
-                                    "paddingAll": "0px"
-                                }
-                            ),
-                        
+                                ]
+                            }
+                        ), ]
                     )
                 ),
                 TemplateSendMessage(

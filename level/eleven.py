@@ -1,5 +1,5 @@
 from linebot.models import (
-    TextSendMessage, ImageCarouselTemplate, ImageCarouselColumn, PostbackAction, TemplateSendMessage, ButtonsTemplate, URIAction
+    TextSendMessage,  FlexSendMessage, CarouselContainer, BoxComponent, TemplateSendMessage, ButtonsTemplate, URIAction
 )
 
 from api.lineBotApi import line_bot_api
@@ -31,44 +31,352 @@ def leveleleven_message(event):
                     text="原來虎珍的前身是正義百貨行，真是一棟有歷史的建築！"),
                 TextSendMessage(
                     text="「日記7」\n\n這裡好多漂亮的裙子喔！幸好我們跟老闆娘阿姨很熟，可以來這裡玩！我們最喜歡在這裡想像我們結婚的樣子了！說好了我們要當彼此的伴娘喔！"),
-                TemplateSendMessage(
-                    alt_text='ImageCarousel template',
-                    template=ImageCarouselTemplate(
-                        columns=[
-                            ImageCarouselColumn(
-                                image_url='https://ithelp.ithome.com.tw/storage/image/fight.svg',
-                                action=PostbackAction(
-                                    label='A',
-                                    display_text='postback text1',
-                                    data='action=buy&itemid=1'
-                                )
-                            ),
-                            ImageCarouselColumn(
-                                image_url='https://ithelp.ithome.com.tw/404/bear404.jpg',
-                                action=PostbackAction(
-                                    label='B',
-                                    display_text='postback text2',
-                                    data='action=buy&itemid=2'
-                                )
-                            ),
-                            ImageCarouselColumn(
-                                image_url='https://ithelp.ithome.com.tw/404/bear404.jpg',
-                                action=PostbackAction(
-                                    label='C',
-                                    display_text='postback text3',
-                                    data='action=buy&itemid=3'
-                                )
-                            ),
-                            ImageCarouselColumn(
-                                image_url='https://ithelp.ithome.com.tw/404/bear404.jpg',
-                                action=PostbackAction(
-                                    label='D',
-                                    display_text='postback text4',
-                                    data='action=buy&itemid=4'
-                                )
-                            )
+                FlexSendMessage(
+                    alt_text='start',
+                    contents=CarouselContainer({
+                        "type": "carousel",
+                        "contents": [
+                            {
+                                "type": "bubble",
+                                "size": "micro",
+                                "body": {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "image",
+                                            "url": "https://i.imgur.com/xnRHvyW.png",
+                                            "size": "full",
+                                            "aspectMode": "cover",
+                                            "gravity": "center"
+                                        },
+                                        {
+                                            "type": "box",
+                                            "layout": "vertical",
+                                            "contents": [],
+                                            "position": "absolute",
+                                            "background": {
+                                                "type": "linearGradient",
+                                                "angle": "0deg",
+                                                "endColor": "#00000000",
+                                                "startColor": "#00000099"
+                                            },
+                                            "width": "100%",
+                                            "height": "40%",
+                                            "offsetBottom": "0px",
+                                            "offsetStart": "0px",
+                                            "offsetEnd": "0px"
+                                        },
+                                        {
+                                            "type": "box",
+                                            "layout": "horizontal",
+                                            "contents": [
+                                                {
+                                                    "type": "box",
+                                                    "layout": "vertical",
+                                                    "contents": [
+                                                        {
+                                                            "type": "box",
+                                                            "layout": "horizontal",
+                                                            "contents": [
+                                                                {
+                                                                    "type": "text",
+                                                                    "text": "A 新茜娜面霜",
+                                                                    "size": "md",
+                                                                    "color": "#ffffff",
+                                                                    "align": "center",
+                                                                    "weight": "bold"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ],
+                                                    "spacing": "xs"
+                                                }
+                                            ],
+                                            "position": "absolute",
+                                            "offsetBottom": "0px",
+                                            "offsetStart": "0px",
+                                            "offsetEnd": "0px",
+                                            "paddingAll": "20px"
+                                        }
+                                    ],
+                                    "paddingAll": "0px"
+                                }
+                            },
+                            {
+                                "type": "bubble",
+                                "size": "micro",
+                                "body": {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "image",
+                                            "url": "https://i.imgur.com/a1oTHKo.png",
+                                            "size": "full",
+                                            "aspectMode": "cover",
+                                            "aspectRatio": "1:1",
+                                            "gravity": "center"
+                                        },
+                                        {
+                                            "type": "box",
+                                            "layout": "vertical",
+                                            "contents": [],
+                                            "position": "absolute",
+                                            "background": {
+                                                "type": "linearGradient",
+                                                "angle": "0deg",
+                                                "endColor": "#00000000",
+                                                "startColor": "#00000099"
+                                            },
+                                            "width": "100%",
+                                            "height": "40%",
+                                            "offsetBottom": "0px",
+                                            "offsetStart": "0px",
+                                            "offsetEnd": "0px"
+                                        },
+                                        {
+                                            "type": "box",
+                                            "layout": "horizontal",
+                                            "contents": [
+                                                {
+                                                    "type": "box",
+                                                    "layout": "vertical",
+                                                    "contents": [
+                                                        {
+                                                            "type": "box",
+                                                            "layout": "horizontal",
+                                                            "contents": [
+                                                                {
+                                                                    "type": "text",
+                                                                    "text": "B 皇家痱子粉",
+                                                                    "size": "md",
+                                                                    "color": "#ffffff",
+                                                                    "align": "center",
+                                                                    "weight": "bold"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ],
+                                                    "spacing": "xs"
+                                                }
+                                            ],
+                                            "position": "absolute",
+                                            "offsetBottom": "0px",
+                                            "offsetStart": "0px",
+                                            "offsetEnd": "0px",
+                                            "paddingAll": "20px"
+                                        }
+                                    ],
+                                    "paddingAll": "0px"
+                                }
+                            },
+                            {
+                                "type": "bubble",
+                                "size": "micro",
+                                "body": {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "image",
+                                            "url": "https://i.imgur.com/3eMqaXF.png",
+                                            "size": "full",
+                                            "aspectMode": "cover",
+                                            "aspectRatio": "1:1",
+                                            "gravity": "center"
+                                        },
+                                        {
+                                            "type": "box",
+                                            "layout": "vertical",
+                                            "contents": [],
+                                            "position": "absolute",
+                                            "background": {
+                                                "type": "linearGradient",
+                                                "angle": "0deg",
+                                                "endColor": "#00000000",
+                                                "startColor": "#00000099"
+                                            },
+                                            "width": "100%",
+                                            "height": "40%",
+                                            "offsetBottom": "0px",
+                                            "offsetStart": "0px",
+                                            "offsetEnd": "0px"
+                                        },
+                                        {
+                                            "type": "box",
+                                            "layout": "horizontal",
+                                            "contents": [
+                                                {
+                                                    "type": "box",
+                                                    "layout": "vertical",
+                                                    "contents": [
+                                                        {
+                                                            "type": "box",
+                                                            "layout": "horizontal",
+                                                            "contents": [
+                                                                {
+                                                                    "type": "text",
+                                                                    "text": "C 麗娜珍珠膏",
+                                                                    "size": "md",
+                                                                    "color": "#ffffff",
+                                                                    "align": "center",
+                                                                    "weight": "bold"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ],
+                                                    "spacing": "xs"
+                                                }
+                                            ],
+                                            "position": "absolute",
+                                            "offsetBottom": "0px",
+                                            "offsetStart": "0px",
+                                            "offsetEnd": "0px",
+                                            "paddingAll": "20px"
+                                        }
+                                    ],
+                                    "paddingAll": "0px"
+                                }
+                            },
+                            {
+                                "type": "bubble",
+                                "size": "micro",
+                                "body": {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "image",
+                                            "url": "https://i.imgur.com/FSN4sNj.png",
+                                            "size": "full",
+                                            "aspectMode": "cover",
+                                            "aspectRatio": "1:1",
+                                            "gravity": "center"
+                                        },
+                                        {
+                                            "type": "box",
+                                            "layout": "vertical",
+                                            "contents": [],
+                                            "position": "absolute",
+                                            "background": {
+                                                "type": "linearGradient",
+                                                "angle": "0deg",
+                                                "endColor": "#00000000",
+                                                "startColor": "#00000099"
+                                            },
+                                            "width": "100%",
+                                            "height": "40%",
+                                            "offsetBottom": "0px",
+                                            "offsetStart": "0px",
+                                            "offsetEnd": "0px"
+                                        },
+                                        {
+                                            "type": "box",
+                                            "layout": "horizontal",
+                                            "contents": [
+                                                {
+                                                    "type": "box",
+                                                    "layout": "vertical",
+                                                    "contents": [
+                                                        {
+                                                            "type": "box",
+                                                            "layout": "horizontal",
+                                                            "contents": [
+                                                                {
+                                                                    "type": "text",
+                                                                    "text": "D 耐斯洗髮粉",
+                                                                    "size": "md",
+                                                                    "color": "#ffffff",
+                                                                    "align": "center",
+                                                                    "weight": "bold"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ],
+                                                    "spacing": "xs"
+                                                }
+                                            ],
+                                            "position": "absolute",
+                                            "offsetBottom": "0px",
+                                            "offsetStart": "0px",
+                                            "offsetEnd": "0px",
+                                            "paddingAll": "20px"
+                                        }
+                                    ],
+                                    "paddingAll": "0px"
+                                }
+                            },
+                            {
+                                "type": "bubble",
+                                "size": "micro",
+                                "body": {
+                                    "type": "box",
+                                    "layout": "vertical",
+                                    "contents": [
+                                        {
+                                            "type": "image",
+                                            "url": "https://i.imgur.com/ZyFc4xW.png",
+                                            "size": "full",
+                                            "aspectMode": "cover",
+                                            "aspectRatio": "1:1",
+                                            "gravity": "center"
+                                        },
+                                        {
+                                            "type": "box",
+                                            "layout": "vertical",
+                                            "contents": [],
+                                            "position": "absolute",
+                                            "background": {
+                                                "type": "linearGradient",
+                                                "angle": "0deg",
+                                                "endColor": "#00000000",
+                                                "startColor": "#00000099"
+                                            },
+                                            "width": "100%",
+                                            "height": "40%",
+                                            "offsetBottom": "0px",
+                                            "offsetStart": "0px",
+                                            "offsetEnd": "0px"
+                                        },
+                                        {
+                                            "type": "box",
+                                            "layout": "horizontal",
+                                            "contents": [
+                                                {
+                                                    "type": "box",
+                                                    "layout": "vertical",
+                                                    "contents": [
+                                                        {
+                                                            "type": "box",
+                                                            "layout": "horizontal",
+                                                            "contents": [
+                                                                {
+                                                                    "type": "text",
+                                                                    "text": "E 百雀羚",
+                                                                    "size": "md",
+                                                                    "color": "#ffffff",
+                                                                    "align": "center",
+                                                                    "weight": "bold"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ],
+                                                    "spacing": "xs"
+                                                }
+                                            ],
+                                            "position": "absolute",
+                                            "offsetBottom": "0px",
+                                            "offsetStart": "0px",
+                                            "offsetEnd": "0px",
+                                            "paddingAll": "20px"
+                                        }
+                                    ],
+                                    "paddingAll": "0px"
+                                }
+                            }
                         ]
-                    )
+                    })
                 ),
                 TemplateSendMessage(
                     alt_text='勘板模糊圖',

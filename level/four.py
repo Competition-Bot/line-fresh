@@ -78,10 +78,73 @@ def levelfour_message(event):
                         }
                     }
                 }),
-            TextSendMessage(
-                text="「日記3」\n\n你找對地方了，史艷文，還記得我們以前常常大鬧警局嗎，還會偷偷溜消防廳的天梯呢，嘻嘻\n我偷偷留了下一個地方的線索，合同廳舍裡面有一個會飛的動物呦！"),
+            FlexSendMessage(
+                alt_text='日記3',
+                contents={
+                    "type": "bubble",
+                    "size": "kilo",
+                    "direction": "ltr",
+                    "body": {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [
+                            {
+                                "type": "text",
+                                "text": "「日記3」",
+                                "wrap": True,
+                                "weight": "bold",
+                                 "size": "md"
+                            },
+                            {
+                                "type": "text",
+                                "text": "你找對地方了，史艷文，還記得我們以前常常大鬧警局嗎，還會偷偷溜消防廳的天梯呢，嘻嘻",
+                                "wrap": True,
+                                "margin": "md",
+                                "size": "md"
+                            },
+                            {
+                                "type": "text",
+                                "text": "我偷偷留了下一個地方的線索，合同廳舍裡面有一個會飛的動物呦！",
+                                "wrap": True,
+                                "margin": "sm",
+                                "size": "md"
+                            }
+                        ]
+                    }
+                }),
+            FlexSendMessage(
+                alt_text='你還記得我們少了幾支羽毛嗎?',
+                contents={
+                    "type": "bubble",
+                    "body": {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [
+                            {
+                                "type": "text",
+                                "text": "你還記得我們少了幾支羽毛嗎?\n( 請輸入『少了O支』)",
+                                "wrap": True,
+                                "margin": "sm"
+                            }
+                        ]
+                    },
+                    "footer": {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [
+                            {
+                                "type": "button",
+                                "action": {
+                                    "type": "uri",
+                                    "label": "打開相機辨識尋找物件",
+                                    "uri": "https://miro.com/app/board/o9J_lwl7Qi0=/"
+                                }
+                            }
+                        ]
+                    }
+                }),
             TemplateSendMessage(
-                alt_text='合同廳舍',
+                alt_text='你還記得我們少了幾支羽毛嗎?',
                 template=ButtonsTemplate(
                     text='你還記得我們少了幾支羽毛嗎?\n(請輸入『少了O支』)',
                     actions=[

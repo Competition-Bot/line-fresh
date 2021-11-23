@@ -1,5 +1,5 @@
 from linebot.models import (
-    TextSendMessage,  FlexSendMessage, CarouselContainer, BubbleContainer, TemplateSendMessage, ButtonsTemplate, URIAction
+    TextSendMessage,  FlexSendMessage, CarouselContainer, TemplateSendMessage, ButtonsTemplate, URIAction
 )
 
 from api.lineBotApi import line_bot_api
@@ -33,9 +33,9 @@ def leveleleven_message(event):
                     text="「日記7」\n\n這裡好多漂亮的裙子喔！幸好我們跟老闆娘阿姨很熟，可以來這裡玩！我們最喜歡在這裡想像我們結婚的樣子了！說好了我們要當彼此的伴娘喔！"),
                 FlexSendMessage(
                     alt_text='11',
-                    contents=CarouselContainer({
-                        "type": "carousel",
-                        "contents": [
+                    contents=CarouselContainer(
+                        type="carousel",
+                        contents=[
                             {
                                 "type": "bubble",
                                 "size": "micro",
@@ -376,7 +376,6 @@ def leveleleven_message(event):
                                 }
                             }
                         ]
-                    }
                     )
                 ),
                 TemplateSendMessage(

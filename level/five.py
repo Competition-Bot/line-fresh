@@ -77,30 +77,7 @@ def levelfive_message(event):
                         )
                     )
                 ),
-                FlexSendMessage(
-                    alt_text='start',
-                    contents=BubbleContainer(
-                        size="kilo",
-                        direction="ltr",
-                        body={
-                            "type": "box",
-                            "layout": "vertical",
-                            "contents": [
-                                {
-                                    "type": "text",
-                                    "text": "輸入『前往0000』，0000是地點名稱，00數量僅供參考目吧」",
-                                    "color": "#959595",
-                                    "wrap": True,
-                                },
-                                {
-                                    "type": "text",
-                                    "text": "線索在合同廳舍的門牌號碼中，輸入正確的收音機頻道",
-                                    "color": "#959595",
-                                    "wrap": True,
-                                    "margin": "md"
-                                }
-                            ]
-                        }
-                    )),
+                TextSendMessage(
+                    text="輸入『前往0000』，0000是地點名稱，00數量僅供參考目吧」\n\n線索在合同廳舍的門牌號碼中，輸入正確的收音機頻道"),
             ]
         ))

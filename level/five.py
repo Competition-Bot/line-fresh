@@ -13,8 +13,27 @@ def levelfive_message(event):
         line_bot_api.reply_message(
             event.reply_token,
             [
-                TextSendMessage(
-                    text="「這是電台節目表，你應該還記得我們最愛聽什麼節目吧!」\n小春留"),
+                FlexSendMessage(
+                    alt_text='start',
+                    contents=BubbleContainer({
+                        "type": "bubble",
+                        "body": {
+                            "type": "box",
+                            "layout": "vertical",
+                            "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "「這是電台節目表，你應該還記得我們最愛聽什麼節目吧」",
+                                    "wrap": True,
+                                },
+                                {
+                                    "type": "text",
+                                    "text": " 小春留",
+                                    "align": "end"
+                                }
+                            ]
+                        }
+                    })),
                 ImageSendMessage("https://i.imgur.com/iUKYj9Z.jpg",
                                  "https://i.imgur.com/iUKYj9Z.jpg"),
                 FlexSendMessage(
@@ -50,13 +69,35 @@ def levelfive_message(event):
                                         "type": "uri",
                                         "label": "打開收音機",
                                         "uri": "https://liff.line.me/1656608345-0Yx6zYOX"
-                                        }
+                                    }
                                 }
                             ]
                         )
                     )
                 ),
-                TextSendMessage(
-                    text="(輸入『前往0000』，0000是地點名稱，00數量僅供參考)\n\n(線索在合同廳舍的門牌號碼中，輸入正確的收音機頻道)")
+                FlexSendMessage(
+                    alt_text='start',
+                    contents=BubbleContainer({
+                        "type": "bubble",
+                        "body": {
+                            "type": "box",
+                            "layout": "vertical",
+                            "contents": [
+                                {
+                                    "type": "text",
+                                    "text": "輸入『前往0000』,0000是地點名稱,00數量僅供參考",
+                                    "color": "#666666",
+                                    "wrap": True
+                                },
+                                {
+                                    "type": "text",
+                                    "text": "線索在合同廳舍的門牌號碼中,透過liff輸入正確的收音機頻道",
+                                    "color": "#666666",
+                                    "wrap": True,
+                                    "margin": "md"
+                                }
+                            ]
+                        }
+                    })),
             ]
         ))

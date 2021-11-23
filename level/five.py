@@ -38,26 +38,6 @@ def levelfive_message(event):
                                 }
                             ]
                         ),
-                        footer=BoxComponent(
-                            layout="vertical",
-                            spacing="sm",
-                            contents=[
-                                {
-                                    "type": "button",
-                                    "style": "link",
-                                    "height": "sm",
-                                    "action": {
-                                    "type": "uri",
-                                    "label": "打開收音機",
-                                    "uri": "https://liff.line.me/1656608345-0Yx6zYOX"
-                                    }
-                                },
-                                {
-                                    "type": "spacer",
-                                    "size": "sm"
-                                }
-                            ]
-                        )
                     )
                 ),
                 TextSendMessage(

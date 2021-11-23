@@ -81,18 +81,27 @@ def leveleleven_message(event):
                                 "text": "「日記7」",
                                 "wrap": True,
                                 "weight": "bold",
-                                 "size": "sm"
+                                 "size": "md"
                             },
                             {
                                 "type": "text",
                                 "text": "這裡好多漂亮的裙子喔！幸好我們跟老闆娘阿姨很熟，可以來這裡玩！我們最喜歡在這裡想像我們結婚的樣子了！說好了我們要當彼此的伴娘喔！",
                                 "wrap": True,
                                 "margin": "md",
-                                "size": "sm"
+                                "size": "md"
                             }
                         ]
                     }
                 }),
-            
+            TemplateSendMessage(
+                alt_text='看板模糊圖',
+                template=ButtonsTemplate(
+                    thumbnail_image_url='https://i.imgur.com/0Y7WXxz.jpg',
+                    imageAspectRatio='rectangle',
+                    imageSize='cover',
+                    imageBackgroundColor='#FFFFFF',
+                    text='請依照虎珍糖右手邊的看板獲得線索，輸入『OOOOO』，OOOOO是五個英文字母',
+                )
+            )
         ]
     )

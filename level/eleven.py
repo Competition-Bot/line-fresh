@@ -35,10 +35,10 @@ def leveleleven_message(event):
                     alt_text='11',
                     contents=CarouselContainer(
                         [
-                            {
-                                "type": "bubble",
-                                "size": "micro",
-                                "body": {
+                            BubbleContainer(
+                                type= "bubble",
+                                size= "micro",
+                                body= {
                                         "type": "box",
                                         "layout": "vertical",
                                         "contents": [
@@ -52,11 +52,11 @@ def leveleleven_message(event):
                                         ],
                                     "paddingAll": "0px"
                                 }
-                            },
-                            {
-                                "type": "bubble",
-                                "size": "micro",
-                                "body": {
+                            ),
+                            BubbleContainer(
+                                type= "bubble",
+                                size= "micro",
+                                body= {
                                         "type": "box",
                                         "layout": "vertical",
                                         "contents": [
@@ -71,64 +71,7 @@ def leveleleven_message(event):
                                         ],
                                     "paddingAll": "0px"
                                 }
-                            },
-                            {
-                                "type": "bubble",
-                                "size": "micro",
-                                "body": {
-                                        "type": "box",
-                                        "layout": "vertical",
-                                        "contents": [
-                                            {
-                                                "type": "image",
-                                                "url": "https://i.imgur.com/3eMqaXF.png",
-                                                "size": "full",
-                                                "aspectMode": "cover",
-                                                "aspectRatio": "1:1",
-                                                "gravity": "center"
-                                            }
-                                        ],
-                                    "paddingAll": "0px"
-                                }
-                            },
-                            {
-                                "type": "bubble",
-                                "size": "micro",
-                                "body": {
-                                        "type": "box",
-                                        "layout": "vertical",
-                                        "contents": [
-                                            {
-                                                "type": "image",
-                                                "url": "https://i.imgur.com/FSN4sNj.png",
-                                                "size": "full",
-                                                "aspectMode": "cover",
-                                                "aspectRatio": "1:1",
-                                                "gravity": "center"
-                                            }
-                                        ],
-                                    "paddingAll": "0px"
-                                }
-                            },
-                            {
-                                "type": "bubble",
-                                "size": "micro",
-                                "body": {
-                                        "type": "box",
-                                        "layout": "vertical",
-                                        "contents": [
-                                            {
-                                                "type": "image",
-                                                "url": "https://i.imgur.com/ZyFc4xW.png",
-                                                "size": "full",
-                                                "aspectMode": "cover",
-                                                "aspectRatio": "1:1",
-                                                "gravity": "center"
-                                            }
-                                        ],
-                                    "paddingAll": "0px"
-                                }
-                            }
+                            ),
                         ]
                     )
                 ),

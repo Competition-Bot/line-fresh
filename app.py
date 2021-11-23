@@ -162,6 +162,14 @@ def handle_message(event):
                                                             "color": "#666666",
                                                             "size": "sm",
                                                             "flex": 5
+                                                        },
+                                                        {
+                                                            "type": "text",
+                                                            "text": "玩家將扮演撿到日記本的角色，將依循日記的指示探索虎尾的巷弄，進而發現小春與小花之間的點點滴滴。",
+                                                            "wrap": True,
+                                                            "color": "#666666",
+                                                            "size": "sm",
+                                                            "flex": 5
                                                         }
                                                     ]
                                                 },

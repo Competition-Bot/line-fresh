@@ -123,7 +123,7 @@ def handle_message(event):
                 event.reply_token,
                 FlexSendMessage(
                     alt_text='test',
-                    contents={[
+                    contents=[
                         {
                             "type": "text",
                             "text": "虎尾手札 - 穿梭巷弄的少女",
@@ -169,7 +169,7 @@ def handle_message(event):
                                 }
                             ]
                         }
-                    ]}
+                    ]
                 )
             )
         )

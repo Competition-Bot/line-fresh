@@ -27,41 +27,5 @@ def leveleleven_message(event):
                         ]
                     )
                 ),
-                TextSendMessage(
-                    text="原來虎珍的前身是正義百貨行，真是一棟有歷史的建築！"),
-                TextSendMessage(
-                    text="「日記7」\n\n這裡好多漂亮的裙子喔！幸好我們跟老闆娘阿姨很熟，可以來這裡玩！我們最喜歡在這裡想像我們結婚的樣子了！說好了我們要當彼此的伴娘喔！"),
-                FlexSendMessage(
-                    alt_text='start',
-                    contents=BubbleContainer(
-                        size="kilo",
-                        direction="ltr",
-                        body={
-                            "type": "box",
-                            "layout": "vertical",
-                            "contents": [
-                                {
-                                    "type": "text",
-                                    "text": "「這是電台節目表，你應該還記得我們最愛聽什麼節目吧」",
-                                    "wrap": True,
-                                },
-                                {
-                                    "type": "text",
-                                    "text": " 小春留",
-                                    "align": "end"
-                                }
-                            ]
-                        }
-                    )),
-                TemplateSendMessage(
-                    alt_text='勘板模糊圖',
-                    template=ButtonsTemplate(
-                        thumbnail_image_url='https://i.imgur.com/0Y7WXxz.jpg',
-                        imageAspectRatio='rectangle',
-                        imageSize='cover',
-                        imageBackgroundColor='#FFFFFF',
-                        text='請依照虎珍糖右手邊的看板獲得線索，輸入『OOOOO』，OOOOO是五個英文字母',
-                    )
-                ),
             ]
         ))

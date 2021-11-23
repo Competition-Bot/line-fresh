@@ -94,7 +94,7 @@ def levelfive_message(event):
                                 },
                                 {
                                     "type": "text",
-                                    "text": "線索在合同廳舍的門牌號碼中，透過liff輸入正確的收音機頻道",
+                                    "text": "線索在合同廳舍的門牌號碼中，輸入正確的收音機頻道",
                                     "color": "#666666",
                                     "wrap": True,
                                     "margin": "md"

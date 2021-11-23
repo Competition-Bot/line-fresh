@@ -178,7 +178,8 @@ def handle_message(event):
                                                             "size": "sm",
                                                             "flex": 5
                                                         }
-                                                    ]
+                                                    ],
+                                                    "margin": "md"
                                                 }
                                             ]
                                         }

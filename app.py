@@ -158,7 +158,7 @@ def handle_message(event):
                                                         {
                                                             "type": "text",
                                                             "text": "小春與小花是要好的朋友，她們喜歡在巷弄間到處探險，藏著她倆的秘密，升上高中後小春將搬離虎尾去外地，因此她將策劃一場紀念她們友誼的冒險...",
-                                                            "wrap": 'true',
+                                                            "wrap": True,
                                                             "color": "#666666",
                                                             "size": "sm",
                                                             "flex": 5

@@ -8,14 +8,12 @@ from api.lineBotApi import line_bot_api
 def levelone_message(event):
     line_bot_api.reply_message(
         event.reply_token,
-        line_bot_api.reply_message(
-            event.reply_token,
-            [FlexSendMessage(
-                alt_text='一封信件掉落',
-                contents={
-                    "type": "bubble",
-                    "size": "kilo",
-                    "body": {
+        [FlexSendMessage(
+            alt_text='一封信件掉落',
+            contents={
+                "type": "bubble",
+                "size": "kilo",
+                "body": {
                         "type": "box",
                         "layout": "vertical",
                         "contents": [
@@ -44,16 +42,16 @@ def levelone_message(event):
                                 "margin": "md"
                             }
                         ]
-                    }
-                }),
+                }
+            }),
 
-             FlexSendMessage(
-                alt_text='日記1',
-                contents={
-                    "type": "bubble",
-                    "size": "kilo",
-                    "direction": "ltr",
-                    "body": {
+         FlexSendMessage(
+            alt_text='日記1',
+            contents={
+                "type": "bubble",
+                "size": "kilo",
+                "direction": "ltr",
+                "body": {
                         "type": "box",
                         "layout": "vertical",
                         "contents": [
@@ -62,7 +60,7 @@ def levelone_message(event):
                                 "text": "「日記1」",
                                 "wrap": True,
                                 "weight": "bold",
-                                 "size": "md"
+                                "size": "md"
                             },
                             {
                                 "type": "text",
@@ -85,12 +83,12 @@ def levelone_message(event):
                                 "margin": "none"
                             }
                         ]
-                    }
-                }),
-                ImageSendMessage("https://i.imgur.com/RoQgakz.png",
-                                 "https://i.imgur.com/RoQgakz.png"),
-                ImageSendMessage("https://i.imgur.com/lxu1dMG.png",
-                                 "https://i.imgur.com/lxu1dMG.png"),
-                TextSendMessage(
-                text="( 請輸入『OO』，前面為數字，後面是英文大寫字母 )"),
-             ]))
+                }
+            }),
+         ImageSendMessage("https://i.imgur.com/RoQgakz.png",
+                          "https://i.imgur.com/RoQgakz.png"),
+         ImageSendMessage("https://i.imgur.com/lxu1dMG.png",
+                          "https://i.imgur.com/lxu1dMG.png"),
+         TextSendMessage(
+            text="( 請輸入『OO』，前面為數字，後面是英文大寫字母 )"),
+         ])

@@ -18,7 +18,7 @@ def levelfive_message(event):
                 TemplateSendMessage(
                     alt_text='一台復古的收音機',
                     template=ButtonsTemplate(
-                        thumbnail_image_url='https://raw.githubusercontent.com/tsaiyuyes7/LIFF_test/main/img/radio.png',
+                        thumbnail_image_url='https://i.imgur.com/gi0z0bv.png',
                         imageAspectRatio='rectangle',
                         imageSize='cover',
                         imageBackgroundColor='#FFFFFF',

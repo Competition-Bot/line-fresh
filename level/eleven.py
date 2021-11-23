@@ -1,5 +1,5 @@
 from linebot.models import (
-    TextSendMessage, ImageSendMessage, TemplateSendMessage, ButtonsTemplate, URIAction
+    TextSendMessage, ImageCarouselTemplate, ImageCarouselColumn, PostbackAction, TemplateSendMessage, ButtonsTemplate, URIAction
 )
 
 from api.lineBotApi import line_bot_api
@@ -31,11 +31,47 @@ def leveleleven_message(event):
                     text="原來虎珍的前身是正義百貨行，真是一棟有歷史的建築！"),
                 TextSendMessage(
                     text="「日記7」\n\n這裡好多漂亮的裙子喔！幸好我們跟老闆娘阿姨很熟，可以來這裡玩！我們最喜歡在這裡想像我們結婚的樣子了！說好了我們要當彼此的伴娘喔！"),
-                ImageSendMessage("https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg",
-                                 "https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg"),
-
                 TemplateSendMessage(
-                    alt_text='勘板模糊塗',
+                    alt_text='ImageCarousel template',
+                    template=ImageCarouselTemplate(
+                        columns=[
+                            ImageCarouselColumn(
+                                image_url='https://ithelp.ithome.com.tw/storage/image/fight.svg',
+                                action=PostbackAction(
+                                    label='A',
+                                    display_text='postback text1',
+                                    data='action=buy&itemid=1'
+                                )
+                            ),
+                            ImageCarouselColumn(
+                                image_url='https://ithelp.ithome.com.tw/404/bear404.jpg',
+                                action=PostbackAction(
+                                    label='B',
+                                    display_text='postback text2',
+                                    data='action=buy&itemid=2'
+                                )
+                            ),
+                            ImageCarouselColumn(
+                                image_url='https://ithelp.ithome.com.tw/404/bear404.jpg',
+                                action=PostbackAction(
+                                    label='C',
+                                    display_text='postback text3',
+                                    data='action=buy&itemid=3'
+                                )
+                            ),
+                            ImageCarouselColumn(
+                                image_url='https://ithelp.ithome.com.tw/404/bear404.jpg',
+                                action=PostbackAction(
+                                    label='D',
+                                    display_text='postback text4',
+                                    data='action=buy&itemid=4'
+                                )
+                            )
+                        ]
+                    )
+                ),
+                TemplateSendMessage(
+                    alt_text='勘板模糊圖',
                     template=ButtonsTemplate(
                         thumbnail_image_url='https://i.imgur.com/0Y7WXxz.jpg',
                         imageAspectRatio='rectangle',

@@ -8,7 +8,7 @@ from linebot.exceptions import (
     InvalidSignatureError
 )
 from linebot.models import (
-    JoinEvent, MessageEvent, TextMessage, TextSendMessage, ImageSendMessage, MessageAction, URIAction, ButtonsTemplate, PostbackAction, TemplateSendMessage
+    JoinEvent, MessageEvent, TextMessage, FlexSendMessage, BubbleContainer, ImageComponent, TextComponent, BoxComponent, TextSendMessage, BoxComponent, ImageSendMessage, MessageAction, URIAction, ButtonsTemplate, PostbackAction, TemplateSendMessage
 )
 
 from api.lineBotApi import line_bot_api
@@ -116,9 +116,74 @@ def handle_message(event):
     elif((event.message.text == '五分車' and level == '13-3') or event.message.text == 'test10'):
         level = 'end'
         levelend_message(event)
+    elif(event.message.text == 'test'):
+        line_bot_api.reply_message(
+            event.reply_token,
+            line_bot_api.reply_message(
+                event.reply_token,
+                [
+                    FlexSendMessage(
+                        alt_text='test',
+                        contents=BubbleContainer(
+                            hero=ImageComponent(
+                                type="image",
+                                url="https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg",
+                                size="full",
+                                aspectRatio="20:13",
+                                aspectMode="cover",
+                            ),
+                            body=BoxComponent(
+                                layout="vertical",
+                                contents=[
+                                    TextComponent(
+                                        text="虎尾手札 - 穿梭巷弄的少女",
+                                        weight="bold",
+                                        size="xl"
+                                    ),
+                                    BoxComponent(
+                                        layout="vertical",
+                                        margin="lg",
+                                        spacing="sm",
+                                        contents=[
+                                            BoxComponent(
+                                                type="box",
+                                                layout="baseline",
+                                                spacing="sm",
+                                                contents=[
+                                                    TextComponent(
+                                                        type="text",
+                                                        text="小春與小花是要好的朋友，她們喜歡在巷弄間到處探險，藏著她倆的秘密，升上高中後小春將搬離虎尾去外地，因此她將策劃一場紀念她們友誼的冒險...",
+                                                        wrap=true,
+                                                        color="#666666",
+                                                        size="sm",
+                                                        flex=5
+                                                    )
+                                                ]
+                                            ),
+                                            BoxComponent(
+                                                layout="baseline",
+                                                spacing="sm",
+                                                contents=[
+                                                    TextComponent(
+                                                        text="玩家將扮演撿到日記本的角色，將依循日記的指示探索虎尾的巷弄，進而發現小春與小花之間的點點滴滴。",
+                                                        wrap=true,
+                                                        color="#666666",
+                                                        size="sm",
+                                                        flex=5
+                                                    )
+                                                ],
+                                                margin="md")
+                                        ]),
+                                ]
+
+                            )
+                        )
+                    )
+                ]
+            ))
 
 
-@handler.add(JoinEvent, message=TextMessage)
+@ handler.add(JoinEvent, message=TextMessage)
 def handle_message(event):
     line_bot_api.push_message('<to>', TextSendMessage(text='Hello World!'))
 

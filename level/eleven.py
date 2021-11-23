@@ -34,7 +34,7 @@ def leveleleven_message(event):
                 FlexSendMessage(
                     alt_text='11',
                     contents=CarouselContainer(
-                        contents=[
+                        contents=
                             BubbleContainer(
                                 size="micro",
                                 body={
@@ -52,8 +52,7 @@ def leveleleven_message(event):
                                     "paddingAll": "0px"
                                 }
                             ),
-
-                        ]
+                        
                     )
                 ),
                 TemplateSendMessage(

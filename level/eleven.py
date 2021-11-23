@@ -9,7 +9,6 @@ def leveleleven_message(event):
     line_bot_api.reply_message(
         event.reply_token,
         line_bot_api.reply_message(
-            event.reply_token,
             [
                 TemplateSendMessage(
                     alt_text='虎珍堂',
@@ -34,11 +33,11 @@ def leveleleven_message(event):
                     text="「日記7」\n\n這裡好多漂亮的裙子喔！幸好我們跟老闆娘阿姨很熟，可以來這裡玩！我們最喜歡在這裡想像我們結婚的樣子了！說好了我們要當彼此的伴娘喔！"),
                 ImageSendMessage("https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg",
                                  "https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg"),
-                
+
                 TemplateSendMessage(
                     alt_text='勘板模糊塗',
                     template=ButtonsTemplate(
-                        thumbnail_image_url='https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg',
+                        thumbnail_image_url='https://i.imgur.com/0Y7WXxz.jpg',
                         imageAspectRatio='rectangle',
                         imageSize='cover',
                         imageBackgroundColor='#FFFFFF',

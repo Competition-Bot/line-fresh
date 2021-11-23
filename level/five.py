@@ -20,7 +20,7 @@ def levelfive_message(event):
                     template=ButtonsTemplate(
                         thumbnail_image_url='https://i.imgur.com/gi0z0bv.png',
                         imageAspectRatio='rectangle',
-                        imageSize='cover',
+                        imageSize='fit',
                         imageBackgroundColor='#FFFFFF',
                         text='一台復古的收音機',
                         actions=[

@@ -132,23 +132,13 @@ def handle_message(event):
                                 aspectRatio="20:13",
                                 aspectMode="cover",
                             ),
-                            body=BoxComponent(
-                                layout="vertical",
-                                contents=[
-                                    TextComponent(
-                                        text="虎尾手札 - 穿梭巷弄的少女",
-                                        weight="bold",
-                                        size="xl"
-                                    )
-                                ]
-                            )
                         )
                     )
                 ]
             ))
 
 
-@handler.add(JoinEvent, message=TextMessage)
+@ handler.add(JoinEvent, message=TextMessage)
 def handle_message(event):
     line_bot_api.push_message('<to>', TextSendMessage(text='Hello World!'))
 

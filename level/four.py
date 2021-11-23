@@ -116,6 +116,8 @@ def levelfour_message(event):
                 alt_text='你還記得我們少了幾支羽毛嗎?',
                 contents={
                     "type": "bubble",
+                    'size': "kilo",
+                    'direction': "ltr",
                     "body": {
                         "type": "box",
                         "layout": "vertical",
@@ -142,17 +144,5 @@ def levelfour_message(event):
                             }
                         ]
                     }
-                }),
-            TemplateSendMessage(
-                alt_text='你還記得我們少了幾支羽毛嗎?',
-                template=ButtonsTemplate(
-                    text='你還記得我們少了幾支羽毛嗎?\n(請輸入『少了O支』)',
-                    actions=[
-                        URIAction(
-                            label='打開相機辨識尋找物件',
-                            uri='https://miro.com/app/board/o9J_lwl7Qi0=/'
-                        )
-                    ]
-                )
-            ),
+                })
         ])

@@ -142,12 +142,12 @@ def handle_message(event):
                                             "type": "text",
                                             "text": "虎尾手札 - 穿梭巷弄的少女",
                                             "weight": "bold",
-                                            "size": "md"
+                                            "size": "lg"
                                         },
                                         {
                                             "type": "box",
                                             "layout": "vertical",
-                                            "margin": "lg",
+                                            "margin": "md",
                                             "spacing": "sm",
                                             "contents": [
                                                 {
@@ -162,7 +162,14 @@ def handle_message(event):
                                                             "color": "#666666",
                                                             "size": "sm",
                                                             "flex": 5
-                                                        },
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "box",
+                                                    "layout": "baseline",
+                                                    "spacing": "sm",
+                                                    "contents": [
                                                         {
                                                             "type": "text",
                                                             "text": "玩家將扮演撿到日記本的角色，將依循日記的指示探索虎尾的巷弄，進而發現小春與小花之間的點點滴滴。",
@@ -172,10 +179,10 @@ def handle_message(event):
                                                             "flex": 5
                                                         }
                                                     ]
-                                                },
+                                                }
                                             ]
                                         }
-                                     ]
+                                    ]
                                 )
                             ]
                         )

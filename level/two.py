@@ -38,14 +38,14 @@ def leveltwo_message(event):
                                     "wrap": True,
                                     "size": "sm",
                                     "margin": "sm"
-                                },
+                                    },
                             {
                                     "type": "text",
                                     "text": "在這裏，你可以找一個舒適的角落看書、享用咖啡茶點、觀賞主題展覽，不定期舉辦精彩的活動與鄉親分享！",
                                     "wrap": True,
                                     "size": "sm",
                                     "margin": "sm"
-                                }
+                                    }
                         ],
                         "offsetTop": "none",
                         "paddingAll": "lg"
@@ -77,4 +77,10 @@ def leveltwo_message(event):
                              "https://i.imgur.com/IU3w7Kf.png"),
             TextSendMessage(
                 text="( 請輸入『OOOOO』，OO為景點名 )"),
-        ])
+        ]
+    )
+    line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(
+            text="原來這裡就是虎尾厝沙龍呀，啊！這個是藝術家王忠龍的石頭鳥鐵雕圍牆"),
+    )

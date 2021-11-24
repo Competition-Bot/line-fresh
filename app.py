@@ -70,7 +70,7 @@ def handle_message(event):
     elif((event.message.text == '打開日記' and level == '0') or event.message.text == 'test1'):
         level = '1'
         levelone_message(event)
-    elif((event.message.text == '4B' and level == '1') or event.message.text == 'test2'):
+    elif((event.message.text == '虎尾厝沙龍' and level == '1') or event.message.text == 'test2'):
         level = '2'
         leveltwo_message(event)
     elif(((event.message.text == '有6隻石頭鳥' or event.message.text == '有六隻石頭鳥') and level == '2') or event.message.text == 'test3'):

@@ -76,5 +76,5 @@ def leveltwo_message(event):
             ImageSendMessage("https://i.imgur.com/IU3w7Kf.png",
                              "https://i.imgur.com/IU3w7Kf.png"),
             TextSendMessage(
-                text="( 請輸入『有Ｏ隻石頭鳥』，可以參考上方示意圖，至實際場景中詳細觀看 )"),
+                text="( 請輸入『OOOOO』，OO為景點名 )"),
         ])

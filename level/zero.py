@@ -2,8 +2,6 @@ from linebot.models import (
     TextSendMessage, TemplateSendMessage, ButtonsTemplate, MessageAction, FlexSendMessage
 )
 
-import time
-
 from api.lineBotApi import line_bot_api
 
 
@@ -61,5 +59,5 @@ def levelzero_message(event):
                         }
                     }
                 })
-        ],False,10
+        ]
     )

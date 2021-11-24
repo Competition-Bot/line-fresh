@@ -55,8 +55,6 @@ def callback():
 
     return 'OK'
 
-import time
-
 level = 'init'
 
 
@@ -64,9 +62,6 @@ level = 'init'
 def handle_message(event):
     global level
     if((event.message.text == 'start' and level == 'init') or event.message.text == 'start'):
-        start_message(event)
-        time.sleep(1)
-        start_message(event)
         start_message(event)
         level = 'start'
     elif((event.message.text == '開始遊戲' and level == 'start') or event.message.text == 'test0'):

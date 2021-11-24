@@ -57,7 +57,8 @@ def levelzero_message(event):
                     },
                     "styles": {
                         "body": {
-                            "separator": True
+                            "separator": True,
+                            "backgroundColor": "#333333"
                         }
                     }
                 })

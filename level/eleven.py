@@ -1,14 +1,14 @@
 from linebot.models import (
     TextSendMessage,  FlexSendMessage
 )
+import time
 
 from api.lineBotApi import line_bot_api
 
 
-def leveleleven_message(event):
-    line_bot_api.reply_message(
-        event.reply_token,
-        [
+def leveleleven_message(user_id):
+    line_bot_api.push_message(
+        user_id,[
             FlexSendMessage(
                 alt_text='虎珍堂',
                 contents={
@@ -66,6 +66,12 @@ def leveleleven_message(event):
                 }),
             TextSendMessage(
                 text="原來虎珍的前身是正義百貨行，真是一棟有歷史的建築！"),
+        ]
+    )
+    time.sleep(0.5)
+    line_bot_api.push_message(
+        user_id,
+        [
             FlexSendMessage(
                 alt_text='日記7',
                 contents={
@@ -93,6 +99,12 @@ def leveleleven_message(event):
                         ]
                     }
                 }),
+        ]
+    )
+    time.sleep(0.5)
+    line_bot_api.push_message(
+        user_id,
+        [
             FlexSendMessage(
                 alt_text='看板模糊圖',
                 contents={
@@ -439,6 +451,12 @@ def leveleleven_message(event):
                         }
                     ]
                 }),
+        ]
+    )
+    time.sleep(0.3)
+    line_bot_api.push_message(
+        user_id,
+        [
             FlexSendMessage(
                 alt_text='看板模糊圖',
                 contents={
@@ -475,3 +493,4 @@ def leveleleven_message(event):
                 }),
         ]
     )
+

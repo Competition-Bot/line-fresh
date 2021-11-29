@@ -26,7 +26,7 @@ def start_message(event):
                         "contents": [
                             {
                                 "type": "text",
-                                "text": "虎尾手札 - 穿梭巷弄的少女",
+                                "text": "虎尾手札 - 穿梭巷弄",
                                 "wrap": True,
                                 "size": "lg",
                                 "weight": "bold"

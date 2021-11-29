@@ -115,13 +115,7 @@ def handle_message(event):
     elif((event.message.text == '五分車' and level == '13-3') or event.message.text == 'end'):
         level = 'end'
         levelend_message(event)
-    elif((event.massage.text == '測測')):
-        line_bot_api.reply_message(
-        event.reply_token,
-        [
-            TextSendMessage(text="測測試")
-        ]
-    )
+    
 
 
 @handler.add(JoinEvent, message=TextMessage)

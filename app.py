@@ -2,19 +2,38 @@ import os
 from flask import Flask, request, abort
 
 from linebot import (
-    LineBotApi, WebhookHandler
+    WebhookHandler
 )
 from linebot.exceptions import (
     InvalidSignatureError
 )
 from linebot.models import (
-    MessageEvent, TextMessage, TextSendMessage, ImageSendMessage, MessageAction, URIAction, ButtonsTemplate, PostbackAction, TemplateSendMessage
+    JoinEvent, MessageEvent, TextMessage,  TextSendMessage, BoxComponent, ImageSendMessage, MessageAction, URIAction, ButtonsTemplate, PostbackAction, TemplateSendMessage
 )
+
+from api.lineBotApi import line_bot_api
+
+from level.start import start_message
+from level.zero import levelzero_message
+from level.one import levelone_message
+from level.two import leveltwo_message
+from level.three import levelthree_message
+from level.four import levelfour_message
+from level.five import levelfive_message
+from level.six import levelsix_message
+from level.seven import levelseven_message
+from level.eight import leveleight_message
+from level.nine import levelnine_message
+from level.ten import levelten_message
+from level.eleven import leveleleven_message
+from level.twelve import leveltwelve_message
+from level.thirteen import (levelthirteen_one_message,
+                            levelthirteen_two_message, levelthirteen_three_message)
+from level.end import levelend_message
 
 app = Flask(__name__)
 
-line_bot_api = LineBotApi(
-    'qDvsOUDQMWXwONG+aH+fwhbeD5qU7Cs9okmn5FngnuXAZlykbPx77W6O5cuvPAjVloywUpG3ZD1hSMTT28SvctIcybUYHJlAmJY2e4KzbeHeUDVVmfAbeZwqZiDPAafYoyUSdpd59O0ARk937Vv7VwdB04t89/1O/w1cDnyilFU=')
+
 handler = WebhookHandler('dcc7f9bee687f90fe33cc309962f1210')
 
 
@@ -36,127 +55,78 @@ def callback():
 
     return 'OK'
 
-
-level = 1
+level = 'init'
 
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     global level
-    if(event.message.text == '開始1'):
+    if((event.message.text == 'start' and level == 'init') or event.message.text == 'start'):
+        start_message(event)
+        level = 'start'
+    elif((event.message.text == '開始遊戲' and level == 'start') or event.message.text == 'test0'):
+        levelzero_message(event)
+        level = '0'
+    elif((event.message.text == '打開日記' and level == '0') or event.message.text == 'test1'):
+        level = '1'
+        levelone_message(event)
+    elif((event.message.text == '虎尾厝沙龍' and level == '1') or event.message.text == 'test2'):
+        level = '2'
+        leveltwo_message(event)
+    elif(((event.message.text == '有6隻石頭鳥' or event.message.text == '有六隻石頭鳥') and level == '2') or event.message.text == 'test3'):
+        level = '3'
+        levelthree_message(event)
+    elif((event.message.text == '前往合同廳舍' and level == '3') or event.message.text == 'test4'):
+        level = '4'
+        levelfour_message(event)
+    elif(((event.message.text == '少了6隻' or event.message.text == '少了六隻') and level == '4') or event.message.text == 'test5'):
+        level = '5'
+        levelfive_message(event)
+    elif((event.message.text == '前往雲林布袋戲館' and level == '5') or event.message.text == 'test6'):
+        level = '6'
+        levelsix_message(event)
+    elif((event.message.text == '生、淨' and level == '6') or event.message.text == 'test7'):
+        level = '7'
+        levelseven_message(event)
+    elif((event.message.text == '屋敷' and level == '7') or event.message.text == 'test8'):
+        level = '8'
+        leveleight_message(event)
+    elif(((event.message.text == 'COOL' or event.message.text == 'cool') and level == '8') or event.message.text == 'test9'):
+        level = '9'
+        levelnine_message(event)
+    elif((event.message.text == '1921' and level == '9') or event.message.text == 'test10'):
+        level = '10'
+        levelten_message(event)
+    elif((event.message.text == '前往虎珍堂' and level == '10') or event.message.text == 'test11'):
+        level = '11'
+        leveleleven_message(event)
+    elif(((event.message.text == 'EADCB' or event.message.text == 'eadcb') and level == '11') or event.message.text == 'test12'):
+        level = '12'
+        leveltwelve_message(event)
+    elif(((event.message.text == '我搭14:00的區間車出發' or event.message.text == '我搭14：00的區間車出發') and level == '12') or event.message.text == 'test13'):
+        level = '13-1'
+        levelthirteen_one_message(event)
+    elif((event.message.text == '8' and level == '13-1')):
+        level = '13-2'
+        levelthirteen_two_message(event)
+    elif((event.message.text == '3' and level == '13-2')):
+        level = '13-3'
+        levelthirteen_three_message(event)
+    elif((event.message.text == '五分車' and level == '13-3') or event.message.text == 'end'):
+        level = 'end'
+        levelend_message(event)
+    elif((event.massage.text == '測測')):
         line_bot_api.reply_message(
-            event.reply_token,
-            TemplateSendMessage(
-                alt_text='虎尾驛',
-                template=ButtonsTemplate(
-                    thumbnail_image_url='https://i2.wp.com/ivychi.com/wp-content/uploads/20201104123257_57.jpg',
-                    imageAspectRatio='rectangle',
-                    imageSize='cover',
-                    imageBackgroundColor='#FFFFFF',
-                    title='虎尾驛',
-                    text='虎尾驛為中華民國雲林縣虎尾鎮一已廢棄木造火車站，原是虎尾糖廠小火車車站。',
-                    actions=[
-                        MessageAction(
-                            label='查看日記',
-                            text='查看日記'
-                        ),
-                        URIAction(
-                            label='查看熱點資訊',
-                            uri='https://spot.line.me/detail/720382419873591332'
-                        )
-                    ]
-                )
-            ))
-    elif(event.message.text == '查看日記'):
-        line_bot_api.reply_message(
-            event.reply_token,
-            [TextSendMessage(
-                text="以前阿嬤常常帶我去虎尾糖廠買冰棒吃～然後坐在月台看火車～小時候我曾經在作文上寫我要當火車司機呢！"),
-             TextSendMessage(text="我最喜歡這班車！"),
-             ImageSendMessage("https://github.com/tsaiyuyes7/LIFF_test/blob/main/img/9-09.jpg?raw=true",
-                              "https://github.com/tsaiyuyes7/LIFF_test/blob/main/img/9-09.jpg?raw=true"),
-             TextSendMessage(text="請輸入『我搭00：00的000出發！』(00：00為時間、000為車種)")])
-    elif(event.message.text == '我搭14:00的2077出發！' or event.message.text == '我搭14：00的2077出發！' or event.message.text == '我搭14：00的2077出發!' or event.message.text == '我搭14:00的2077出發!'):
-        line_bot_api.reply_message(
-            event.reply_token,
-            TemplateSendMessage(
-                alt_text='虎尾鐵橋',
-                template=ButtonsTemplate(
-                    thumbnail_image_url='https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Huwei_Dual_gauge_track_bridge_01.jpg/288px-Huwei_Dual_gauge_track_bridge_01.jpg',
-                    imageAspectRatio='rectangle',
-                    imageSize='cover',
-                    imageBackgroundColor='#FFFFFF',
-                    title='虎尾鐵橋',
-                    text='虎尾糖廠鐵橋，舊名番薯莊板仔橋，於台灣日治時期興建並於國民政府時代延建，為雲林縣縣定古蹟。',
-                    actions=[
-                        MessageAction(
-                            label='查看日記',
-                            text='查看日記'
-                        ),
-                        URIAction(
-                            label='查看熱點資訊',
-                            uri='https://spot.line.me/detail/720382419873591332'
-                        )
-                    ]
-                )
-            ))
+        event.reply_token,
+        [
+            TextSendMessage(text="測測試")
+        ]
+    )
 
-    elif(event.message.text == '開始2'):
-        line_bot_api.reply_message(
-            event.reply_token,
-            [TextSendMessage(
-                text="這是電台節目表，你應該還記得我們最愛聽什麼節目吧!"),
-             ImageSendMessage("https://github.com/tsaiyuyes7/LIFF_test/blob/main/img/channel-06.jpg?raw=true",
-                              "https://github.com/tsaiyuyes7/LIFF_test/blob/main/img/channel-06.jpg?raw=true"),
-             TemplateSendMessage(
-                alt_text='一台復古收音機',
-                template=ButtonsTemplate(
-                    thumbnail_image_url='https://raw.githubusercontent.com/tsaiyuyes7/LIFF_test/main/img/radio.png',
-                    imageAspectRatio='rectangle',
-                    imageSize='cover',
-                    imageBackgroundColor='#FFFFFF',
-                    text='一台復古收音機',
-                    actions=[
-                        URIAction(
-                            label='開啟收音機',
-                            uri='https://liff.line.me/1656608345-0Yx6zYOX'
-                        )
-                    ]
-                )
-            ),
-                TextSendMessage(text="請輸入『前往xxx』(xxx是地點名)")]
-        )
 
-# @handler.add(MessageEvent, message=TextMessage)
-# def handle_message(event):
-    # line_bot_api.reply_message(
-    #     event.reply_token,
-    #     TemplateSendMessage(
-    #         alt_text='This is a buttons template',
-    #         template=ButtonsTemplate(
-    #             thumbnail_image_url='https://ithelp.ithome.com.tw/storage/image/fight.svg',
-    #             imageAspectRatio='rectangle',
-    #             imageSize='cover',
-    #             imageBackgroundColor='#FFFFFF',
-    #             title='iThome鐵人2021',
-    #             text='Buttons template',
-    #             actions=[
-    #                 PostbackAction(
-    #                     label='postback',
-    #                     display_text='postback text',
-    #                     data='action=buy&itemid=1'
-    #                 ),
-    #                 MessageAction(
-    #                     label='message',
-    #                     text='message text'
-    #                 ),
-    #                 URIAction(
-    #                     label='uri',
-    #                     uri='http://example.com/'
-    #                 )
-    #             ]
-    #         )
-    #     ))
+@handler.add(JoinEvent, message=TextMessage)
+def handle_message(event):
+    line_bot_api.push_message('<to>', TextSendMessage(text='Hello World!'))
 
 
 if __name__ == "__main__":

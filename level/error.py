@@ -10,6 +10,9 @@ def error_Nohelp(event,help):
         text = "嘿嘿~答錯嘍! 再好好想想吧! 需要幫助的話請輸入「我需要幫忙」"
     elif( help == "2"):
         text = "哎呀! 再仔細看看提示吧! 如果還需要幫助的話請輸入「我需要幫忙」"
+    elif( help == "3"):
+        text = "再好好地看看提示喔! 如果真的答不出來請再出輸入「我需要幫忙」"
+
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text)
@@ -50,6 +53,15 @@ def Help_1(event,level):
         text= "好哇! 看板上面寫了好多非常火紅的商品，依照商品出現順序去想想對應的英文字母要怎麼排列吧!"
     
     elif(level == '12'):
+        text= "好哇! 把其中一串數字放進九宮格中連起來，似乎得到了一個數字圖形"
+
+    elif(level == '13-1'):
+        text= "好哇! 虎尾鐵橋有8個叉叉，你算對了嗎?輸入「8」來進入下一個謎題"
+    
+    elif(level == '13-2'):
+        text= "好哇! 虎珍堂的菜單上有3種口味的虎月燒，輸入「3」進入下一個謎題!"
+
+    elif(level == '13-3'):
         text= "好哇! 把其中一串數字放進九宮格中連起來，似乎得到了一個數字圖形"
     
     line_bot_api.reply_message(
@@ -93,6 +105,31 @@ def Help_2(event,level):
     
     elif(level == '12'):
         text= "好哇! 四串數字放進九宮格，獲得了2077數字，對應到時刻表的車次，是哪一班呢？"
+    
+    elif(level == '13-1'):
+        text= "好哇! 虎尾鐵橋有8個叉叉，你算對了嗎?輸入「8」來進入下一個謎題"
+
+    elif(level == '13-3'):
+        text= "好哇! 答案為五分車，你找到了嗎?輸入「五分車」完成謎題吧!"
+
+    line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text)
+    )
+
+def Help_3(event,level):
+    if(level == "4"):
+        text= "好哇! 比對塗鴉與實際物件，好像少了7根羽毛！輸入「少了7支」來進行下一關吧！"
+    elif(level == "5"):
+        text= "好哇! 收音機播放出「雲林布袋戲館」，輸入「前往雲林布袋戲館」，進入下一關吧!"
+    elif(level == "7"):
+        text= "好哇! 可以在文字密碼表中3A和0B的位置分別得到「屋」「敷」，輸入「屋敷」進入下一個關卡吧!"
+    elif(level == "8"):
+        text= "好哇! 一個圓形（Ｃ），兩個三角形（Ｏ），一個菱形（Ｌ）合起來就是cool!輸入「cool」來進行下一關吧！"
+    elif(level == "10"):
+        text= "好哇! 紅色得到「虎」，黃色得到「堂」，藍色得到「珍」，輸入「前往虎珍堂」進入下一個關卡吧!"
+    elif(level == "12"):
+        text= "好哇! 2077對應到14:00的區間車，輸入「我搭14:00的區間車出發」進入下一關吧!"
     
     line_bot_api.reply_message(
         event.reply_token,

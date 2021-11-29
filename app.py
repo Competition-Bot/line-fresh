@@ -12,7 +12,7 @@ from linebot.models import (
 )
 
 from api.lineBotApi import line_bot_api
-from level.error import error_Nohelp, error_Nohelp, levelone_Help1, levelone_Help2
+from level.error import error_Nohelp, error_Nohelp, Help_1, Help_2
 from level.start import start_message
 from level.zero import levelzero_message
 from level.one import levelone_message
@@ -75,29 +75,58 @@ def handle_message(event):
         level = '1'
         help == '1'
         levelone_message(event)
+
+    elif((event.message.text == '我需要幫忙' and level == '1')):
+        if(help == '1'):
+            Help_1(event,level)
+            help = '2'
+        else:
+            Help_2(event,level)
+    elif((event.message.text != '虎尾厝沙龍' and level == '1')): #嘿嘿答錯
+        error_Nohelp(event,help)
     elif((event.message.text == '虎尾厝沙龍' and level == '1') or event.message.text == 'test2'):
         level = '2'
         help == '1'
         leveltwo_message(event)
+
     elif((event.message.text == '我需要幫忙' and level == '2')):
         if(help == '1'):
-            levelone_Help1(event)
+            Help_1(event)
             help = '2'
         else:
-            levelone_Help2(event)
-    elif((event.message.text != '有6隻石頭鳥' and event.message.text != '有六隻石頭鳥' and level == '2')): #嘿嘿答錯
+            Help_2(event)
+    elif((event.message.text != '有7隻石頭鳥' and event.message.text != '有七隻石頭鳥' and level == '2')): #嘿嘿答錯
         error_Nohelp(event,help)
     
-    elif(((event.message.text == '有6隻石頭鳥' or event.message.text == '有六隻石頭鳥') and level == '2') or event.message.text == 'test3'):
+    elif(((event.message.text == '有7隻石頭鳥' or event.message.text == '有七隻石頭鳥') and level == '2') or event.message.text == 'test3'):
         help == '1'
         level = '3'
         levelthree_message(event)
+
+    elif((event.message.text == '我需要幫忙' and level == '3')):
+        if(help == '1'):
+            Help_1(event,level)
+            help = '2'
+        else:
+            Help_2(event,level)
+    elif((event.message.text != '前往合同廳舍' and level == '3')): #嘿嘿答錯
+        error_Nohelp(event,help)
     elif((event.message.text == '前往合同廳舍' and level == '3') or event.message.text == 'test4'):
         level = '4'
         levelfour_message(event)
+    
+    elif((event.message.text == '我需要幫忙' and level == '4')):
+        if(help == '1'):
+            Help_1(event,level)
+            help = '2'
+        else:
+            Help_2(event,level)
+    elif(((event.message.text != '少了7隻' or event.message.text != '少了七隻') and level == '4')):
+        error_Nohelp(event,help)
     elif(((event.message.text == '少了7隻' or event.message.text == '少了七隻') and level == '4') or event.message.text == 'test5'):
         level = '5'
         levelfive_message(event)
+    
     elif((event.message.text == '前往雲林布袋戲館' and level == '5') or event.message.text == 'test6'):
         level = '6'
         levelsix_message(event)

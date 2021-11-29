@@ -139,7 +139,7 @@ def levelfour_message(event):
                                 "action": {
                                     "type": "uri",
                                     "label": "打開相機辨識尋找物件",
-                                    "uri": "https://miro.com/app/board/o9J_lwl7Qi0=/"
+                                    "uri": "https://competition-bot.github.io/line-fresh-webAR/"
                                 }
                             }
                         ]

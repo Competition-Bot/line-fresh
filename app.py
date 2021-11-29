@@ -81,7 +81,7 @@ def handle_message(event):
     elif((event.message.text == '前往合同廳舍' and level == '3') or event.message.text == 'test4'):
         level = '4'
         levelfour_message(event)
-    elif(((event.message.text == '少了6隻' or event.message.text == '少了六隻') and level == '4') or event.message.text == 'test5'):
+    elif(((event.message.text == '少了7隻' or event.message.text == '少了七隻') and level == '4') or event.message.text == 'test5'):
         level = '5'
         levelfive_message(event)
     elif((event.message.text == '前往雲林布袋戲館' and level == '5') or event.message.text == 'test6'):

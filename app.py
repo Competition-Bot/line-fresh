@@ -12,7 +12,7 @@ from linebot.models import (
 )
 
 from api.lineBotApi import line_bot_api
-
+from level.error import error_Nohelp, error_Nohelp, levelone_Help1, levelone_Help2
 from level.start import start_message
 from level.zero import levelzero_message
 from level.one import levelone_message
@@ -57,11 +57,13 @@ def callback():
 
 level = 'init'
 user_id = ''
+help = "1"
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     global user_id
     global level
+    global help
     user_id = event.source.user_id
     if((event.message.text == 'start' and level == 'init') or event.message.text == 'start'):
         start_message(event)
@@ -75,7 +77,16 @@ def handle_message(event):
     elif((event.message.text == '虎尾厝沙龍' and level == '1') or event.message.text == 'test2'):
         level = '2'
         leveltwo_message(event)
+    elif((event.message.text != '有6隻石頭鳥' and event.message.text != '有六隻石頭鳥' and level == '1')): #嘿嘿答錯
+            error_Nohelp(event,help)
+    elif((event.message.text == '我需要幫忙' and level == '1')):
+        if(help == '1'):
+            levelone_Help1(event)
+            help = '2'
+        else:
+            levelone_Help2(event)
     elif(((event.message.text == '有6隻石頭鳥' or event.message.text == '有六隻石頭鳥') and level == '2') or event.message.text == 'test3'):
+        help == '1'
         level = '3'
         levelthree_message(event)
     elif((event.message.text == '前往合同廳舍' and level == '3') or event.message.text == 'test4'):

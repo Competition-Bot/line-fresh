@@ -73,9 +73,11 @@ def handle_message(event):
         level = '0'
     elif((event.message.text == '打開日記' and level == '0') or event.message.text == 'test1'):
         level = '1'
+        help == '1'
         levelone_message(event)
     elif((event.message.text == '虎尾厝沙龍' and level == '1') or event.message.text == 'test2'):
         level = '2'
+        help == '1'
         leveltwo_message(event)
     elif((event.message.text != '有6隻石頭鳥' and event.message.text != '有六隻石頭鳥' and level == '2')): #嘿嘿答錯
         error_Nohelp(event,help)

@@ -56,11 +56,13 @@ def callback():
     return 'OK'
 
 level = 'init'
-
+user_id = ''
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
+    global user_id
     global level
+    user_id = event.source.user_id
     if((event.message.text == 'start' and level == 'init') or event.message.text == 'start'):
         start_message(event)
         level = 'start'
@@ -99,7 +101,7 @@ def handle_message(event):
         levelten_message(event)
     elif((event.message.text == '前往虎珍堂' and level == '10') or event.message.text == 'test11'):
         level = '11'
-        leveleleven_message(event)
+        leveleleven_message(user_id)
     elif(((event.message.text == 'EADCB' or event.message.text == 'eadcb') and level == '11') or event.message.text == 'test12'):
         level = '12'
         leveltwelve_message(event)

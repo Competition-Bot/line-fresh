@@ -76,7 +76,7 @@ def leveltwo_message(event):
             ImageSendMessage("https://i.imgur.com/IU3w7Kf.png",
                              "https://i.imgur.com/IU3w7Kf.png"),
             TextSendMessage(
-                text="( 請輸入『OOOOO』，OO為景點名 )"),
+                text="( 請輸入『有O隻石頭鳥』，O為數字 )"),
         ]
     )
     line_bot_api.reply_message(

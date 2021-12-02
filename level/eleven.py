@@ -68,7 +68,7 @@ def leveleleven_message(user_id):
                 text="原來虎珍的前身是正義百貨行，真是一棟有歷史的建築！"),
         ]
     )
-    time.sleep(0.5)
+    time.sleep(0.8)
     line_bot_api.push_message(
         user_id,
         [
@@ -101,7 +101,7 @@ def leveleleven_message(user_id):
                 }),
         ]
     )
-    time.sleep(0.5)
+    time.sleep(0.8)
     line_bot_api.push_message(
         user_id,
         [
@@ -453,7 +453,7 @@ def leveleleven_message(user_id):
                 }),
         ]
     )
-    time.sleep(0.3)
+    time.sleep(0.8)
     line_bot_api.push_message(
         user_id,
         [

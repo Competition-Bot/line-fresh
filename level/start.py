@@ -15,7 +15,7 @@ def start_message(event):
                     "size": "mega",
                     "hero": {
                         "type": "image",
-                        "url": "https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg",
+                        "url": "https://i.imgur.com/o3xOZPp.png",
                         "size": "full",
                         "aspectMode": "cover",
                         "aspectRatio": "20:14"

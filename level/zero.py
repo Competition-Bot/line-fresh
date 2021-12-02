@@ -18,7 +18,7 @@ def levelzero_message(event):
                     "size": "kilo",
                     "hero": {
                             "type": "image",
-                            "url": "https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg",
+                            "url": "https://i.imgur.com/ePiSzcy.png",
                             "size": "full",
                             "aspectMode": "cover",
                             "aspectRatio": "20:14"

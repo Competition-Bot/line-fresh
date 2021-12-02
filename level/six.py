@@ -91,8 +91,8 @@ def levelsix_message(event):
                         ]
                     }
                 }),
-                ImageSendMessage("https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg",
-                                 "https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg"),
+                ImageSendMessage("https://i.imgur.com/72yAVXk.png",
+                                 "https://i.imgur.com/72yAVXk.png"),
                 TextSendMessage(
                     text="( 參考生旦淨末丑的角色說明，推敲小春與小花自創的故事裡是「生、淨」的角色是什麼。 )\n( 請輸入『生、淨』，按照順序回答人物名 )")
             ]

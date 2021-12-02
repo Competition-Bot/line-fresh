@@ -43,8 +43,8 @@ def levelthree_message(event):
                             ]
                     }
                 }),
-            ImageSendMessage("https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg",
-                             "https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg"),
+            ImageSendMessage("https://i.imgur.com/wOSFVVN.png",
+                             "https://i.imgur.com/wOSFVVN.png"),
             TextSendMessage(
                 text="( 請輸入『前往OOOO』 )"),
         ])

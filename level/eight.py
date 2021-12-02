@@ -93,8 +93,8 @@ def leveleight_message(event):
                         ]
                     }
                 }),
-            ImageSendMessage("https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg",
-                             "https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg"),
+            ImageSendMessage("https://i.imgur.com/72g0cBc.png",
+                             "https://i.imgur.com/72g0cBc.png"),
             TextSendMessage(
                 text="( 輸入『OOOO』OOOO是大寫英文字母 )"),
         ]

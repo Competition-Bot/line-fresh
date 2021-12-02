@@ -31,10 +31,10 @@ def levelten_message(event):
                         ]
                     }
                 )),
-            ImageSendMessage("https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg",
-                             "https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg"),
-            ImageSendMessage("https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg",
-                             "https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg"),
+            ImageSendMessage("https://i.imgur.com/ij73rKs.png",
+                             "https://i.imgur.com/ij73rKs.png"),
+            ImageSendMessage("https://i.imgur.com/nBudfmg.png",
+                             "https://i.imgur.com/nBudfmg.png"),
             TextSendMessage(
                 text="( 請參考數獨以及文字表格，輸入『前往OOOO』，OO是中文字，數量僅供參考 )"),
         ]

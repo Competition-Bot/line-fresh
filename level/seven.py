@@ -33,8 +33,8 @@ def levelseven_message(event):
                 )),
                 ImageSendMessage("https://i.imgur.com/wV1Oinq.jpg",
                                  "https://i.imgur.com/wV1Oinq.jpg"),
-                ImageSendMessage("https://i.imgur.com/xMHkT0i.jpg",
-                                 "https://i.imgur.com/xMHkT0i.jpg"),
+                ImageSendMessage("https://i.imgur.com/Vbk0FCa.jpg",
+                                 "https://i.imgur.com/Vbk0FCa.jpg"),
                 TextSendMessage(
                     text="( 參考1A2B過程以及文字密碼表，輸入『ＯＯ』ＯＯ為兩個中文字 )")
             ]

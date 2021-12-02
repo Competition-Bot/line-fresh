@@ -74,7 +74,7 @@ def handle_message(event):
     elif((event.message.text == '打開日記' and level == '0') or event.message.text == 'test1'):
         level = '1'
         help = '1'
-        levelone_message(event)
+        levelone_message(user_id)
     
 
 

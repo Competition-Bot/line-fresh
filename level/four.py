@@ -4,7 +4,7 @@ from linebot.models import (
 import time
 from api.lineBotApi import line_bot_api
 
-def levelone_message(user_id):
+def levelfour_message(user_id):
     line_bot_api.push_message(
         user_id,[
             FlexSendMessage(

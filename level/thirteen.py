@@ -120,8 +120,8 @@ def levelthirteen_one_message(event):
                             ]
                         }
                     }),
-                ImageSendMessage("https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg",
-                                 "https://ithelp.ithome.com.tw/upload/images/20200111/201068658m7crqYkfm.jpg"),
+                ImageSendMessage("https://i.imgur.com/A2XHYrJ.png",
+                                 "https://i.imgur.com/A2XHYrJ.png"),
             ]
         ))
 

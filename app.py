@@ -82,20 +82,20 @@ def handle_message(event):
     elif((event.message.text == '虎尾厝沙龍' and level == '1') or event.message.text == 'test2'):
         level = '2'
         help = '1'
-        leveltwo_message(event)
+        leveltwo_message(user_id)
 
     elif(((event.message.text == '有6隻石頭鳥' or event.message.text == '有六隻石頭鳥') and level == '2') or event.message.text == 'test3'):
         help = '1'
         level = '3'
-        levelthree_message(event)
+        levelthree_message(user_id)
     elif((event.message.text == '前往合同廳舍' and level == '3') or event.message.text == 'test4'):
         level = '4'
         help = '1'
-        levelfour_message(event)   
+        levelfour_message(user_id)   
     elif(((event.message.text == '少了7支' or event.message.text == '少了七支') and level == '4') or event.message.text == 'test5'):
         level = '5'
         help = '1'
-        levelfive_message(event)
+        levelfive_message(user_id)
     elif((event.message.text == '前往雲林布袋戲館' and level == '5') or event.message.text == 'test6'):
         level = '6'
         help = '1'
@@ -123,7 +123,7 @@ def handle_message(event):
     elif(((event.message.text == 'EADCB' or event.message.text == 'eadcb') and level == '11') or event.message.text == 'test12'):
         level = '12'
         help = '1'
-        leveltwelve_message(event)
+        leveltwelve_message(user_id)
     elif(((event.message.text == '我搭14:00的區間車出發' or event.message.text == '我搭14：00的區間車出發') and level == '12') or event.message.text == 'test13'):
         level = '13-1'
         help = '1'

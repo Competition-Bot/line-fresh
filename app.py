@@ -100,7 +100,7 @@ def handle_message(event):
         level = '6'
         help = '1'
         levelsix_message(event)
-    elif((event.message.text == '生、丑' and level == '6') or event.message.text == 'test7'):
+    elif((event.message.text == '阿修羅、不老太師' and level == '6') or event.message.text == 'test7'):
         level = '7'
         help = '1'
         levelseven_message(event)

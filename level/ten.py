@@ -33,8 +33,8 @@ def levelten_message(event):
                 )),
             ImageSendMessage("https://i.imgur.com/ij73rKs.png",
                              "https://i.imgur.com/ij73rKs.png"),
-            ImageSendMessage("https://i.imgur.com/nBudfmg.png",
-                             "https://i.imgur.com/nBudfmg.png"),
+            ImageSendMessage("https://i.imgur.com/tu34hPs.png",
+                             "https://i.imgur.com/tu34hPs.png"),
             TextSendMessage(
                 text="( 請參考數獨以及文字表格，輸入『前往OOOO』，OO是中文字，數量僅供參考 )"),
         ]

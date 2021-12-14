@@ -120,7 +120,7 @@ def handle_message(event):
         level = '11'
         help = '1'
         leveleleven_message(user_id)
-    elif(((event.message.text == 'EADCB' or event.message.text == 'eadcb') and level == '11') or event.message.text == 'test12'):
+    elif(((event.message.text == 'EACDB' or event.message.text == 'eacdb') and level == '11') or event.message.text == 'test12'):
         level = '12'
         help = '1'
         leveltwelve_message(user_id)
@@ -128,7 +128,7 @@ def handle_message(event):
         level = '13-1'
         help = '1'
         levelthirteen_one_message(event)
-    elif(((event.message.text == '8' or event.message.text == '八') and level == '13-1')):
+    elif(((event.message.text == '10' or event.message.text == '十') and level == '13-1')):
         level = '13-2'
         help = '1'
         levelthirteen_two_message(event)
